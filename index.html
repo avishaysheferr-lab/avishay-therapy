@@ -4,8 +4,23 @@
   <meta name="google-site-verification" content="Dgi8IjJtauLuwML-X0geQqvaVVjhI8t4-gc7qbEAFjk" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>אבישי שפר | טיפול רגשי</title>
+  
+  <link rel="canonical" href="https://avishay-therapy-git.avishaysheferr.workers.dev/" />
+  <title>אבישי שפר | עו״ס קליני ומטפל רגשי בתל אביב ואונליין</title>
   <meta name="description" content="אבישי שפר, עו״ס קליני ומטפל רגשי M.S.W. טיפול רגשי לילדים, נוער ומבוגרים סביב חרדה, דכדוך, טראומה, אובדן, משברי חיים, קשיי קשב וריכוז, הדרכת הורים וקשיים בזוגיות ובמשפחה." />
+  
+  <!-- Open Graph / WhatsApp / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://avishay-therapy-git.avishaysheferr.workers.dev/" />
+  <meta property="og:title" content="אבישי שפר | עו״ס קליני ומטפל רגשי" />
+  <meta property="og:description" content="טיפול רגשי לילדים, נוער ומבוגרים סביב חרדה, טראומה, משברי חיים, קשיי קשב וריכוז והדרכת הורים. קליניקה בתל אביב ואונליין." />
+  <meta property="og:image" content="https://avishay-therapy-git.avishaysheferr.workers.dev/assets/images/hero-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
   <style>
     :root {
       --primary: #2f7d7a;
@@ -385,6 +400,18 @@
       font-size: 17px;
     }
 
+    /* --- אנימציות ריחוף לכרטיסיות ולשלבים --- */
+    .card,
+    .step {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover,
+    .step:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 32px rgba(18, 52, 59, 0.08);
+    }
+
     .mid-cta {
       margin-top: 34px;
       text-align: center;
@@ -439,6 +466,17 @@
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
+      }
+    }
+
+    /* --- התאמה לטאבלט - 2 עמודות --- */
+    @media (max-width: 1050px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .process {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
@@ -811,7 +849,7 @@
       <p>
         בעבודה עם ילדים ונוער, הטיפול מותאם לגיל וליכולת הביטוי, ויכול לשלב שיחה,
         משחק, יצירה והתבוננות רגשית. בעבודה עם הורים ניתן מקום גם לקושי של הילד
-        וגם להתמודדות בבית. יחד ננסה להבין מה הילד מבטא דרך ההתנהגות,
+        גם להתמודדות בבית. יחד ננסה להבין מה הילד מבטא דרך ההתנהגות,
         ולבנות דרכי תגובה מותאמות סביב גבולות, תקשורת וחיזוק הקשר.
       </p>
     
