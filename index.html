@@ -8,15 +8,29 @@
   <title>אבישי שפר | עו״ס קליני ומטפל רגשי בתל אביב ואונליין</title>
   <meta name="description" content="אבישי שפר, עו״ס קליני ומטפל רגשי M.S.W. טיפול רגשי לילדים, נוער ומבוגרים סביב חרדה, דכדוך, טראומה, אובדן, משברי חיים, קשיי קשב וריכוז, הדרכת הורים וקשיים בזוגיות ובמשפחה." />
   
-  <!-- Open Graph / WhatsApp / Facebook -->
+  <!-- Social Sharing Meta Tags | Facebook, WhatsApp, LinkedIn -->
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:site_name" content="אבישי שפר | טיפול רגשי" />
+
   <meta property="og:url" content="https://avishay-therapy-git.avishaysheferr.workers.dev/" />
   <meta property="og:title" content="אבישי שפר | עו״ס קליני ומטפל רגשי" />
   <meta property="og:description" content="טיפול רגשי לילדים, נוער ומבוגרים סביב חרדה, טראומה, משברי חיים, קשיי קשב וריכוז והדרכת הורים. קליניקה בתל אביב ואונליין." />
-  <meta property="og:image" content="https://avishay-therapy-git.avishaysheferr.workers.dev/assets/images/hero-image.webp" />
+
+  <!-- Recommended image size: 1200x630px -->
+  <meta property="og:image" content="https://avishay-therapy-git.avishaysheferr.workers.dev/assets/images/og-image.webp" />
+  <meta property="og:image:secure_url" content="https://avishay-therapy-git.avishaysheferr.workers.dev/assets/images/og-image.webp" />
+  <meta property="og:image:type" content="image/webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:locale" content="he_IL" />
+  <meta property="og:image:alt" content="אבישי שפר - עו״ס קליני ומטפל רגשי בתל אביב ואונליין" />
+
+  <!-- Twitter / X Preview -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="אבישי שפר | עו״ס קליני ומטפל רגשי" />
+  <meta name="twitter:description" content="טיפול רגשי לילדים, נוער ומבוגרים. קליניקה בתל אביב ואונליין." />
+  <meta name="twitter:image" content="https://avishay-therapy-git.avishaysheferr.workers.dev/assets/images/og-image.webp" />
+  <meta name="twitter:image:alt" content="אבישי שפר - טיפול רגשי לילדים, נוער ומבוגרים" />
 
   <!-- SEO & Polish -->
   <link rel="canonical" href="https://avishay-therapy-git.avishaysheferr.workers.dev/" />
@@ -42,6 +56,14 @@
       --radius-card: 26px;
       --container: 1120px;
       --page-padding: 8vw;
+    }
+
+    /* Responsive phone buttons text */
+    .mobile-text {
+      display: none;
+    }
+    .desktop-text {
+      display: inline;
     }
 
     *,
@@ -515,6 +537,9 @@
     }
 
     @media (max-width: 920px) {
+      .mobile-text { display: inline; }
+      .desktop-text { display: none; }
+
       body {
         line-height: 1.62;
         padding-bottom: 92px;
@@ -797,7 +822,7 @@
     },
     "medicalSpecialty": "Psychiatric",
     "availableService": {
-      "@type": "MedicalTest",
+      "@type": "MedicalTherapy",
       "name": "טיפול רגשי, הדרכת הורים, ופסיכותרפיה"
     }
   }
@@ -814,7 +839,10 @@
       </p>
       <div class="actions">
         <a class="btn btn-primary" href="https://wa.me/972528592021?text=שלום%20אבישי,%20אשמח%20לפרטים%20נוספים..." aria-label="שלח הודעת וואטסאפ לאבישי שפר" target="_blank" rel="noopener noreferrer">לתיאום שיחת היכרות קצרה</a>
-        <a class="btn btn-secondary" href="tel:0528592021" aria-label="התקשר טלפונית לאבישי שפר">התקשרו עכשיו</a>
+        <a class="btn btn-secondary" href="tel:0528592021" aria-label="התקשר טלפונית לאבישי שפר">
+          <span class="desktop-text">052-8592021</span>
+          <span class="mobile-text">התקשרו עכשיו</span>
+        </a>
       </div>
       <ul class="trust-box">
         <li class="trust-item">ילדים ונוער</li>
@@ -997,7 +1025,10 @@
       <p>מוזמנים לפנות לשיחת היכרות קצרה, לשאול שאלות ולהבין יחד מה נכון.</p>
       <div class="actions" style="justify-content:center">
         <a class="btn btn-primary" href="https://wa.me/972528592021?text=שלום%20אבישי,%20אשמח%20לפרטים%20נוספים..." aria-label="שלח הודעת וואטסאפ לאבישי שפר" target="_blank" rel="noopener noreferrer">שלחו הודעה בוואטסאפ</a>
-        <a class="btn btn-secondary" href="tel:0528592021" aria-label="התקשר טלפונית לאבישי שפר">התקשרו</a>
+        <a class="btn btn-secondary" href="tel:0528592021" aria-label="התקשר טלפונית לאבישי שפר">
+          <span class="desktop-text">052-8592021</span>
+          <span class="mobile-text">התקשרו</span>
+        </a>
       </div>
     </section>
   </main>
@@ -1008,7 +1039,10 @@
 
   <div class="mobile-sticky">
     <a class="btn btn-primary" href="https://wa.me/972528592021?text=שלום%20אבישי,%20אשמח%20לפרטים%20נוספים..." aria-label="שלח הודעת וואטסאפ לאבישי שפר" target="_blank" rel="noopener noreferrer">וואטסאפ</a>
-    <a class="btn btn-secondary" href="tel:0528592021" aria-label="התקשר טלפונית לאבישי שפר">התקשר</a>
+    <a class="btn btn-secondary" href="tel:0528592021" aria-label="התקשר טלפונית לאבישי שפר">
+      <span class="desktop-text">052-8592021</span>
+      <span class="mobile-text">התקשר</span>
+    </a>
   </div>
 
   <script>
