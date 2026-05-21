@@ -405,10 +405,12 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .card:hover,
-    .step:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 14px 32px rgba(18, 52, 59, 0.08);
+    @media (hover: hover) {
+      .card:hover,
+      .step:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 14px 32px rgba(18, 52, 59, 0.08);
+      }
     }
 
     .mid-cta {
@@ -749,18 +751,18 @@
         משברי חיים, קשיי קשב וריכוז, הדרכת הורים וקשיים בזוגיות, ביחסים ובמשפחה.
       </p>
       <div class="actions">
-        <a class="btn btn-primary" href="https://wa.me/972528592021" target="_blank" rel="noopener">לתיאום שיחת היכרות קצרה</a>
+        <a class="btn btn-primary" href="https://wa.me/972528592021" target="_blank" rel="noopener noreferrer">לתיאום שיחת היכרות קצרה</a>
         <a class="btn btn-secondary" href="tel:0528592021">התקשרו עכשיו</a>
       </div>
-      <div class="trust-box">
-        <div class="trust-item">ילדים ונוער</div>
-        <div class="trust-item">הורים ומשפחות</div>
-        <div class="trust-item">מבוגרים</div>
-      </div>
+      <ul class="trust-box" style="list-style: none; padding: 0;">
+        <li class="trust-item">ילדים ונוער</li>
+        <li class="trust-item">הורים ומשפחות</li>
+        <li class="trust-item">מבוגרים</li>
+      </ul>
     </div>
     <div class="hero-image-wrap">
       <div class="hero-image-card">
-        <img src="assets/images/hero-image.jpg" alt="אבישי שפר, עו״ס קליני ומטפל רגשי">
+        <img src="assets/images/hero-image.jpg" width="800" height="1000" alt="אבישי שפר, עו״ס קליני ומטפל רגשי">
       </div>
     </div>
   </header>
@@ -825,7 +827,7 @@
         </div>
       </div>
       <div class="mid-cta">
-        <a class="btn btn-primary" href="https://wa.me/972528592021" target="_blank" rel="noopener">לתיאום שיחת היכרות קצרה</a>
+        <a class="btn btn-primary" href="https://wa.me/972528592021" target="_blank" rel="noopener noreferrer">לתיאום שיחת היכרות קצרה</a>
       </div>
     </div>
   </section>
@@ -930,7 +932,7 @@
     <h2>לפעמים הצעד הראשון הוא פשוט לדבר</h2>
     <p>מוזמנים לפנות לשיחת היכרות קצרה, לשאול שאלות ולהבין יחד מה נכון.</p>
     <div class="actions" style="justify-content:center">
-      <a class="btn btn-primary" href="https://wa.me/972528592021" target="_blank" rel="noopener">שלחו הודעה בוואטסאפ</a>
+      <a class="btn btn-primary" href="https://wa.me/972528592021" target="_blank" rel="noopener noreferrer">שלחו הודעה בוואטסאפ</a>
       <a class="btn btn-secondary" href="tel:0528592021">התקשרו</a>
     </div>
   </section>
@@ -940,7 +942,7 @@
   </footer>
 
   <div class="mobile-sticky">
-    <a class="btn btn-primary" href="https://wa.me/972528592021" target="_blank" rel="noopener">וואטסאפ</a>
+    <a class="btn btn-primary" href="https://wa.me/972528592021" target="_blank" rel="noopener noreferrer">וואטסאפ</a>
     <a class="btn btn-secondary" href="tel:0528592021">התקשר</a>
   </div>
 
