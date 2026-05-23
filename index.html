@@ -8,6 +8,40 @@
       name="description"
       content="אבישי שפר, עו״ס קליני ומטפל רגשי M.S.W. טיפול רגשי לילדים, נוער ומבוגרים סביב חרדה, דכדוך, טראומה, אובדן, משברי חיים, קשיי קשב וריכוז, הדרכת הורים וקשיים בזוגיות ובמשפחה."
     />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="אבישי שפר" />
+    <link
+      rel="canonical"
+      href="https://avishay-therapy-git.avishaysheferr.workers.dev/"
+    />
+    <meta property="og:locale" content="he_IL" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="אבישי שפר | טיפול רגשי" />
+    <meta property="og:title" content="אבישי שפר | עו״ס קליני ומטפל רגשי" />
+    <meta
+      property="og:description"
+      content="טיפול רגשי לילדים, נוער, הורים ומבוגרים בתל אביב ובאונליין, במרחב בטוח, מקצועי וקשוב."
+    />
+    <meta
+      property="og:url"
+      content="https://avishay-therapy-git.avishaysheferr.workers.dev/"
+    />
+    <meta
+      property="og:image"
+      content="https://avishay-therapy-git.avishaysheferr.workers.dev/assets/images/og-image.jpg"
+    />
+    <meta property="og:image:alt" content="אבישי שפר, עו״ס קליני ומטפל רגשי" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="אבישי שפר | עו״ס קליני ומטפל רגשי" />
+    <meta
+      name="twitter:description"
+      content="טיפול רגשי לילדים, נוער, הורים ומבוגרים בתל אביב ובאונליין."
+    />
+    <meta
+      name="twitter:image"
+      content="https://avishay-therapy-git.avishaysheferr.workers.dev/assets/images/og-image.jpg"
+    />
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="assets/images/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" href="assets/images/favicon-16x16.png" sizes="16x16" />
@@ -18,6 +52,35 @@
       href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Heebo:wght@400;500;700;800&display=swap"
       rel="stylesheet"
     />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "@id": "https://avishay-therapy-git.avishaysheferr.workers.dev/#professional-service",
+        "name": "אבישי שפר",
+        "alternateName": "Avishay Shefer",
+        "description": "עו״ס קליני ומטפל רגשי M.S.W. טיפול רגשי לילדים, נוער, הורים ומבוגרים בתל אביב ובאונליין.",
+        "url": "https://avishay-therapy-git.avishaysheferr.workers.dev/",
+        "image": "https://avishay-therapy-git.avishaysheferr.workers.dev/assets/images/og-image.jpg",
+        "telephone": "+972528592021",
+        "areaServed": ["תל אביב", "ישראל", "אונליין"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "תל אביב",
+          "addressCountry": "IL"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "אבישי שפר",
+          "jobTitle": "עו״ס קליני ומטפל רגשי M.S.W"
+        },
+        "serviceType": [
+          "טיפול רגשי לילדים ונוער",
+          "הדרכת הורים",
+          "טיפול רגשי במבוגרים"
+        ]
+      }
+    </script>
     <style>
       /* Base */
       :root {
@@ -39,8 +102,14 @@
 
         /* Layout */
         --page-padding: clamp(18px, 5vw, 64px);
-        --section-gap: clamp(20px, 2.4vw, 34px);
         --container: 1160px;
+        --space-xs: 10px;
+        --space-sm: 14px;
+        --space-md: clamp(18px, 2vw, 22px);
+        --space-lg: clamp(24px, 2.8vw, 32px);
+        --space-xl: clamp(32px, 4vw, 48px);
+        --section-gap: var(--space-md);
+        --grid-gap: var(--space-md);
 
         /* Typography */
         --font-heading: "Frank Ruhl Libre", "Heebo", serif;
@@ -110,8 +179,7 @@
 
       /* Hero */
       .hero {
-        padding-top: clamp(24px, 3.2vw, 44px);
-        padding-bottom: clamp(24px, 3.8vw, 54px);
+        padding-block: var(--space-lg);
       }
 
       .hero__shell,
@@ -123,11 +191,11 @@
       .hero__shell {
         display: grid;
         grid-template-columns: 1fr;
-        gap: clamp(18px, 2.2vw, 30px);
+        gap: var(--space-md);
         align-items: stretch;
         position: relative;
         overflow: hidden;
-        padding: clamp(30px, 4vw, 48px);
+        padding: var(--space-xl);
         border: 1px solid rgba(39, 66, 79, 0.12);
         border-radius: calc(var(--radius-xl) + 12px);
         background:
@@ -363,9 +431,9 @@
       .eyebrow {
         display: inline-flex;
         align-items: center;
-        gap: 10px;
+        gap: var(--space-xs);
         padding: 7px 13px 7px 15px;
-        margin: 0 0 16px;
+        margin: 0 0 var(--space-sm);
         border: 1px solid var(--ring);
         border-radius: 999px;
         background: rgba(255, 255, 255, 0.82);
@@ -385,8 +453,16 @@
         border: 1px solid rgba(39, 66, 79, 0.12);
         border-radius: 999px;
         background:
-          radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.92), transparent 44%),
-          linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(240, 230, 217, 0.76));
+          radial-gradient(
+            circle at 30% 20%,
+            rgba(255, 255, 255, 0.92),
+            transparent 44%
+          ),
+          linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.92),
+            rgba(240, 230, 217, 0.76)
+          );
         box-shadow: 0 8px 18px rgba(18, 52, 59, 0.08);
       }
 
@@ -413,7 +489,7 @@
 
       h1 {
         font-family: var(--font-heading);
-        margin-bottom: 18px;
+        margin-bottom: var(--space-sm);
         color: #13252d;
         font-size: clamp(40px, 4.35vw, 66px);
         line-height: 1.03;
@@ -424,7 +500,7 @@
 
       h2 {
         font-family: var(--font-heading);
-        margin-bottom: 16px;
+        margin-bottom: var(--space-sm);
         color: #17323a;
         font-size: clamp(29px, 2.7vw, 42px);
         line-height: 1.12;
@@ -435,7 +511,7 @@
 
       .section h2,
       .panel h2 {
-        padding-bottom: 16px;
+        padding-bottom: var(--space-sm);
         background-image: linear-gradient(
           90deg,
           var(--primary-2) 0%,
@@ -461,7 +537,7 @@
 
       h3 {
         font-family: var(--font-heading);
-        margin-bottom: 12px;
+        margin-bottom: var(--space-xs);
         color: #17323a;
         font-size: 23px;
         line-height: 1.18;
@@ -472,7 +548,7 @@
 
       .lead {
         max-width: 30rem;
-        margin-bottom: 22px;
+        margin-bottom: var(--space-md);
         color: #43535a;
         font-size: clamp(18px, 1.7vw, 19px);
         line-height: 1.9;
@@ -482,7 +558,7 @@
       .hero__actions {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: var(--space-xs);
         width: min(100%, 340px);
         margin-inline: auto;
       }
@@ -493,8 +569,7 @@
 
       /* Sections */
       .section {
-        padding-top: clamp(20px, 2.9vw, 30px);
-        padding-bottom: clamp(22px, 3.4vw, 42px);
+        padding-block: var(--space-lg);
       }
 
       .section__shell {
@@ -517,7 +592,7 @@
         display: block;
         width: 34px;
         height: 1px;
-        margin: 0 auto 14px;
+        margin: 0 auto var(--space-sm);
         background: linear-gradient(
           90deg,
           transparent,
@@ -586,7 +661,7 @@
       }
 
       .panel {
-        padding: clamp(28px, 3.2vw, 38px);
+        padding: var(--space-lg);
       }
 
       .panel::before,
@@ -611,8 +686,14 @@
       .main__cta p {
         color: #41545b;
         font-size: 18px;
-        line-height: 1.86;
+        line-height: 1.78;
         text-wrap: pretty;
+      }
+
+      .panel p,
+      .step p,
+      .main__cta p {
+        margin-bottom: var(--space-sm);
       }
 
       .panel p:last-child,
@@ -662,21 +743,21 @@
       }
 
       .panel--list {
-        padding-block: clamp(26px, 3vw, 36px);
+        padding-block: var(--space-lg);
       }
 
       .cards {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 22px;
+        gap: var(--grid-gap);
       }
 
       .card {
-        padding: clamp(25px, 2.8vw, 34px);
+        padding: var(--space-lg);
       }
 
       .card h3 {
-        margin-bottom: 14px;
+        margin-bottom: var(--space-sm);
       }
 
       .card h3::after,
@@ -685,18 +766,18 @@
         display: block;
         width: 28px;
         height: 2px;
-        margin-top: 12px;
+        margin-top: var(--space-sm);
         background: rgba(63, 98, 88, 0.28);
       }
 
       .steps {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 22px;
+        gap: var(--grid-gap);
       }
 
       .step {
-        padding: 26px;
+        padding: var(--space-md);
       }
 
       .step__index {
@@ -705,7 +786,7 @@
         justify-content: center;
         width: 38px;
         height: 38px;
-        margin-bottom: 14px;
+        margin-bottom: var(--space-sm);
         border-radius: 999px;
         background: linear-gradient(180deg, #f6efe6, #e8dbcc);
         color: var(--primary);
@@ -722,7 +803,7 @@
 
       .section .main__cta {
         max-width: 560px;
-        padding: 22px 24px 26px;
+        padding: var(--space-md);
         border-radius: 28px;
         --cta-btn-width: min(290px, 100%);
       }
@@ -744,13 +825,40 @@
         min-width: var(--cta-btn-width);
       }
 
-      /* Footer */
-      .footer {
-        padding-top: 34px;
-        padding-bottom: 42px;
+      .section--final {
+        padding-block: var(--space-lg);
+      }
+
+      .section--final .section__shell {
+        gap: 0;
+      }
+
+      .final-cta {
         display: grid;
         justify-items: center;
-        gap: 14px;
+        gap: var(--space-sm);
+        max-width: min(560px, 100%);
+        padding: var(--space-md);
+      }
+
+      .final-cta h2 {
+        margin-bottom: 0;
+      }
+
+      .final-cta p {
+        margin: 0;
+      }
+
+      .final-cta .btn {
+        margin-top: 2px;
+      }
+
+      /* Footer */
+      .footer {
+        padding-block: var(--space-md);
+        display: grid;
+        justify-items: center;
+        gap: var(--space-xs);
         color: #6b7c81;
         font-size: 15px;
         text-align: center;
@@ -767,7 +875,7 @@
       .footer__contact {
         display: grid;
         justify-items: center;
-        gap: 10px;
+        gap: var(--space-xs);
         width: min(100%, 344px);
       }
 
@@ -775,7 +883,7 @@
         width: 100%;
         display: grid;
         justify-items: center;
-        gap: 8px;
+        gap: var(--space-xs);
       }
 
       .phone-fab--mobile {
@@ -892,8 +1000,8 @@
         .hero__shell {
           grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
           align-items: center;
-          gap: clamp(24px, 3vw, 42px);
-          padding: clamp(28px, 3.6vw, 42px);
+          gap: var(--space-lg);
+          padding: var(--space-xl);
         }
 
         .hero__visual {
@@ -946,14 +1054,30 @@
       }
 
       @media (max-width: 760px) {
+        :root {
+          --space-xs: 8px;
+          --space-sm: 12px;
+          --space-md: 16px;
+          --space-lg: 18px;
+          --space-xl: 20px;
+        }
+
         .hero,
         .section,
         .footer {
           padding-inline: 14px;
         }
 
+        .hero {
+          padding-block: var(--space-lg);
+        }
+
+        .section {
+          padding-block: var(--space-lg);
+        }
+
         .hero__shell {
-          padding: 20px;
+          padding: var(--space-xl);
           border-radius: 30px;
         }
 
@@ -994,7 +1118,7 @@
         }
 
         .panel {
-          padding: 22px;
+          padding: var(--space-xl);
         }
 
         .cards,
@@ -1007,6 +1131,7 @@
         .step p,
         .main__cta p {
           font-size: 17px;
+          line-height: 1.78;
         }
 
         .main__cta .btn {
@@ -1015,12 +1140,21 @@
 
         .section .main__cta {
           max-width: 100%;
-          padding: 20px;
+          padding: var(--space-lg);
+        }
+
+        .section--final {
+          padding-block: var(--space-lg);
+        }
+
+        .final-cta {
+          gap: var(--space-sm);
+          padding: var(--space-lg);
         }
 
         .footer {
-          padding-top: 30px;
-          padding-bottom: 34px;
+          padding-block: var(--space-lg);
+          gap: var(--space-xs);
         }
 
         .footer__copy {
@@ -1051,7 +1185,7 @@
 
       @media (max-width: 460px) {
         .hero__shell {
-          padding: 18px;
+          padding: var(--space-lg);
         }
 
         .hero__visual {
@@ -1069,7 +1203,7 @@
         }
 
         .step {
-          padding: 22px;
+          padding: var(--space-lg);
         }
 
         .btn {
@@ -1343,8 +1477,8 @@
                 לפנייה.
               </p>
               <p>
-                אין צורך להגיע עם ניסוח מסודר מראש; אפשר פשוט להתחיל ממה
-                שמטריד אותך.
+                אין צורך להגיע עם ניסוח מסודר מראש; אפשר פשוט להתחיל ממה שמטריד
+                אותך.
               </p>
               <p>משך כל מפגש הוא כ-45 דקות.</p>
               <p>הטיפול מתקיים בקליניקה בתל אביב ובאונליין.</p>
@@ -1379,13 +1513,11 @@
         </section>
 
         <!-- Final CTA -->
-        <section class="section">
+        <section class="section section--final">
           <div class="section__shell">
-            <article class="panel panel--accent main__cta">
+            <article class="panel panel--accent main__cta final-cta">
               <h2>לפעמים הצעד הראשון מתחיל בשיחה</h2>
-              <p>
-                מוזמנים לשיחת היכרות קצרה, לשאול שאלות ולהבין יחד מה נכון.
-              </p>
+              <p>מוזמנים לשיחת היכרות קצרה, לשאול שאלות ולהבין יחד מה נכון.</p>
               <p>
                 <a
                   class="btn btn--primary"
