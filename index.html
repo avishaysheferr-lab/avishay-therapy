@@ -1,1052 +1,1309 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="he" dir="rtl">
-<head>
-  <meta name="google-site-verification" content="Dgi8IjJtauLuwML-X0geQqvaVVjhI8t4-gc7qbEAFjk" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>אבישי שפר | עו״ס קליני ומטפל רגשי בתל אביב ואונליין</title>
-  <meta name="description" content="אבישי שפר, עו״ס קליני ומטפל רגשי M.S.W. טיפול רגשי לילדים, נוער ומבוגרים סביב חרדה, דכדוך, טראומה, אובדן, משברי חיים, קשיי קשב וריכוז, הדרכת הורים וקשיים בזוגיות ובמשפחה." />
-  
-  <!-- Open Graph / WhatsApp / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://avishay-therapy-git.avishaysheferr.workers.dev/" />
-  <meta property="og:title" content="אבישי שפר | עו״ס קליני ומטפל רגשי" />
-  <meta property="og:description" content="טיפול רגשי לילדים, נוער ומבוגרים סביב חרדה, טראומה, משברי חיים, קשיי קשב וריכוז והדרכת הורים. קליניקה בתל אביב ואונליין." />
-  <meta property="og:image" content="https://avishay-therapy-git.avishaysheferr.workers.dev/assets/images/hero-image.webp" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:locale" content="he_IL" />
-
-  <!-- SEO & Polish -->
-  <link rel="canonical" href="https://avishay-therapy-git.avishaysheferr.workers.dev/" />
-  <link rel="preload" as="image" href="assets/images/hero-image.webp" fetchpriority="high">
-
-  <!-- Favicon & Apple Touch Icon -->
-  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-  <link rel="apple-touch-icon" href="assets/images/favicon.png">
-
-  <style>
-    :root {
-      --primary: #2f7d7a;
-      --primary-dark: #1f5f63;
-      --text: #223238;
-      --muted: #64747a;
-      --bg: #fbfdfc;
-      --card: #ffffff;
-      --soft: #eef7f5;
-      --line: #e6f0ee;
-      --border: #e7efed;
-      --shadow-soft: 0 6px 18px rgba(18, 52, 59, 0.032);
-      --shadow-button: 0 10px 24px rgba(47, 125, 122, 0.17);
-      --radius-card: 26px;
-      --container: 1120px;
-      --page-padding: 8vw;
-    }
-
-    /* Responsive phone buttons text */
-    .mobile-text {
-      display: none;
-    }
-    .desktop-text {
-      display: inline;
-    }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    html {
-      max-width: 100%;
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-    }
-
-    body {
-      max-width: 100%;
-      margin: 0;
-      overflow-x: hidden;
-      font-family: 'Heebo', Arial, "Helvetica Neue", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.72;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.86fr);
-      align-items: center;
-      gap: clamp(38px, 5.2vw, 62px);
-      padding: clamp(60px, 7.4vw, 88px) var(--page-padding) clamp(56px, 6.4vw, 82px);
-      background:
-        radial-gradient(circle at top left, rgba(166, 203, 194, 0.20), transparent 34%),
-        linear-gradient(135deg, #ffffff 0%, #f4faf8 100%);
-    }
-
-    .eyebrow {
-      margin-bottom: 12px;
-      color: var(--primary);
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: 0.1px;
-    }
-
-    h1 {
-      margin: 0 0 18px;
-      color: #17383d;
-      font-size: clamp(36px, 4.4vw, 60px);
-      line-height: 1.15;
-      letter-spacing: -0.35px;
-    }
-
-    h2,
-    h3,
-    p {
-      margin-top: 0;
-    }
-
-    .subtitle {
-      max-width: 720px;
-      margin: 0 0 26px;
-      color: #40585f;
-      font-size: clamp(19px, 1.85vw, 24px);
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 188px;
-      min-height: 52px;
-      max-width: 100%;
-      padding: 15px 25px;
-      border: 1px solid transparent;
-      border-radius: 999px;
-      font-size: 17px;
-      font-weight: 700;
-      white-space: nowrap;
-      transition:
-        transform 0.18s ease,
-        box-shadow 0.18s ease,
-        border-color 0.18s ease,
-        background 0.18s ease;
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: #ffffff;
-      box-shadow: var(--shadow-button);
-    }
-
-    .btn-primary:hover {
-      background: var(--primary-dark);
-      transform: translateY(-1px);
-    }
-
-    .btn-secondary {
-      border-color: #cfe4e0;
-      background: rgba(255, 255, 255, 0.9);
-      color: var(--primary-dark);
-      box-shadow: 0 8px 20px rgba(22, 60, 70, 0.045);
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--primary);
-      transform: translateY(-1px);
-    }
-
-    .btn:focus-visible,
-    .read-more-btn:focus-visible {
-      outline: 3px solid rgba(47, 125, 122, 0.22);
-      outline-offset: 3px;
-    }
-
-    .hero-image-wrap {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-    }
-
-    .hero-image-wrap .hero-image-card {
-      width: min(385px, 100%);
-      margin: 0 auto;
-      overflow: visible;
-      background: transparent;
-      border: 0;
-      border-radius: 0;
-      outline: 0;
-      box-shadow: none;
-      padding: 0;
-    }
-
-    .hero-image-wrap .hero-image-card img {
-      display: block;
-      width: 100%;
-      height: auto;
-      margin: 0;
-      padding: 0;
-      border: 0.5px solid rgba(47, 125, 122, 0.16);
-      border-radius: 24px;
-      outline: 0;
-      object-fit: cover;
-      object-position: center top;
-      background: transparent;
-      box-shadow: 0 5px 14px rgba(22, 60, 70, 0.04);
-    }
-
-    .image-caption {
-      text-align: center;
-      margin-top: 10px;
-      color: var(--primary);
-      font-size: 17px;
-      font-weight: 700;
-      letter-spacing: 0.1px;
-    }
-
-    .trust-box {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      max-width: 620px;
-      margin-top: 22px;
-      list-style: none;
-      padding: 0;
-    }
-
-    .trust-item {
-      padding: 13px 14px;
-      border: 1px solid #e1efec;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.92);
-      color: #3d5a5f;
-      font-weight: 700;
-      text-align: center;
-      box-shadow: 0 6px 16px rgba(18, 52, 59, 0.035);
-    }
-
-    section {
-      padding: clamp(70px, 7.4vw, 88px) var(--page-padding);
-    }
-
-    .section-inner {
-      max-width: var(--container);
-      margin: 0 auto;
-    }
-
-    .section-title {
-      margin-bottom: 30px;
-      text-align: center;
-    }
-
-    .section-title h2 {
-      margin: 0;
-      color: #1f464b;
-      font-size: clamp(29px, 2.8vw, 42px);
-    }
-
-    .cards,
-    .split,
-    .credentials,
-    .process {
-      display: grid;
-      gap: 26px;
-      align-items: stretch;
-    }
-
-    .cards {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .split,
-    .credentials {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .process {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      counter-reset: step;
-    }
-
-    .card,
-    .text-block,
-    .credential-list,
-    .step {
-      background: var(--card);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .card {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      overflow: hidden;
-      padding: 34px;
-      border-radius: var(--radius-card);
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      height: 4px;
-      background: linear-gradient(to left, var(--primary), #a7cfc8);
-    }
-
-    .card h3 {
-      margin: 0 0 12px;
-      color: var(--primary-dark);
-      font-size: 24px;
-    }
-
-    .card p,
-    .card li {
-      margin: 0;
-      color: #4a5f65;
-      font-size: 18px;
-    }
-
-    .card ul,
-    .credential-list ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .card li,
-    .credential-list li {
-      padding: 8px 0;
-    }
-
-    .highlight {
-      padding: 38px;
-      border-radius: 30px;
-      background: linear-gradient(135deg, var(--primary), #6aa8a3);
-      color: #ffffff;
-      box-shadow: 0 14px 34px rgba(47, 125, 122, 0.13);
-    }
-
-    .highlight h2 {
-      margin: 0 0 14px;
-      font-size: 34px;
-      line-height: 1.2;
-    }
-
-    .highlight p {
-      margin: 0;
-      color: rgba(255, 255, 255, 0.94);
-      font-size: 20px;
-    }
-
-    .text-block {
-      padding: 36px;
-      border-radius: 30px;
-    }
-
-    .text-block h2,
-    .credential-list h2 {
-      margin: 0 0 14px;
-      color: #1f464b;
-      font-size: 32px;
-    }
-
-    .text-block p {
-      margin: 0 0 18px;
-      color: #465e64;
-      font-size: 19px;
-    }
-
-    .text-block p:last-child {
-      margin-bottom: 0;
-    }
-
-    .credential-list {
-      padding: 34px;
-      border-color: var(--line);
-      border-radius: 28px;
-    }
-
-    .credential-list li {
-      color: #4a5f65;
-      font-size: 18px;
-    }
-
-    .step {
-      position: relative;
-      padding: 24px 22px;
-      border-radius: 22px;
-      box-shadow: 0 8px 22px rgba(18, 52, 59, 0.038);
-    }
-
-    .step::before {
-      counter-increment: step;
-      content: counter(step);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      margin-bottom: 14px;
-      border-radius: 999px;
-      background: var(--soft);
-      color: var(--primary-dark);
-      font-weight: 800;
-    }
-
-    .step h3 {
-      margin: 0 0 8px;
-      color: #1f464b;
-      font-size: 21px;
-    }
-
-    .step p {
-      margin: 0;
-      color: #536a70;
-      font-size: 17px;
-    }
-
-    .card,
-    .step {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    @media (hover: hover) {
-      .card:hover,
-      .step:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(18, 52, 59, 0.05); /* Softer shadow */
-      }
-    }
-
-    .collapsible-content {
-      max-height: 1500px;
-      overflow: hidden;
-      transition: max-height 0.4s ease-in-out; /* Smooth accordion */
-    }
-
-    .mid-cta {
-      margin-top: 34px;
-      text-align: center;
-    }
-
-    .cta {
-      padding: clamp(70px, 7.4vw, 84px) var(--page-padding);
-      background: #17383d;
-      color: #ffffff;
-      text-align: center;
-    }
-
-    .cta h2 {
-      margin: 0 0 14px;
-      font-size: clamp(32px, 4vw, 52px);
-    }
-
-    .cta p {
-      max-width: 720px;
-      margin: 0 auto 28px;
-      color: rgba(255, 255, 255, 0.84);
-      font-size: 21px;
-    }
-
-    .cta .btn-secondary {
-      border-color: rgba(255, 255, 255, 0.35);
-      background: transparent;
-      color: #ffffff;
-    }
-
-    .footer {
-      padding: 30px var(--page-padding);
-      background: #ffffff;
-      color: #6a7d82;
-      font-size: 16px;
-      text-align: center;
-    }
-
-    .read-more-btn,
-    .mobile-sticky {
-      display: none;
-    }
-    
-    .read-more-btn:hover {
-      background: var(--soft);
-      border-color: var(--primary);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>אבישי שפר | עו״ס קליני ומטפל רגשי בתל אביב ואונליין</title>
+    <meta
+      name="description"
+      content="אבישי שפר, עו״ס קליני ומטפל רגשי M.S.W. טיפול רגשי לילדים, נוער ומבוגרים סביב חרדה, דכדוך, טראומה, אובדן, משברי חיים, קשיי קשב וריכוז, הדרכת הורים וקשיים בזוגיות ובמשפחה."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Heebo:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Base */
+      :root {
+        /* Colors */
+        --bg: #f5efe7;
+        --surface: rgba(255, 255, 255, 0.68);
+        --surface-strong: rgba(255, 255, 255, 0.92);
+        --text: #17262c;
+        --muted: #53666d;
+        --primary: #27424f;
+        --primary-2: #3f6258;
+        --shadow-soft: 0 10px 22px rgba(18, 52, 59, 0.05);
+        --shadow-card: 0 16px 38px rgba(18, 52, 59, 0.07);
+        --shadow-elevated: 0 24px 56px rgba(19, 42, 52, 0.09);
+
+        /* Radius */
+        --radius-xl: 40px;
+
+        /* Layout */
+        --page-padding: clamp(18px, 5vw, 64px);
+        --section-gap: clamp(20px, 2.4vw, 34px);
+        --container: 1160px;
+
+        /* Typography */
+        --font-heading: "Frank Ruhl Libre", "Heebo", serif;
+        --font-body: "Heebo", "Arial", sans-serif;
+
+        /* Motion */
+        --ease: cubic-bezier(0.22, 1, 0.36, 1);
       }
 
       *,
       *::before,
       *::after {
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
+        box-sizing: border-box;
       }
-    }
 
-    @media (max-width: 1050px) {
-      .cards {
-        grid-template-columns: repeat(2, 1fr);
+      html {
+        scroll-behavior: smooth;
       }
-      
-      .process {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 921px) {
-      .eyebrow {
-        display: none;
-      }
-    }
-
-    @media (max-width: 920px) {
-      .mobile-text { display: inline; }
-      .desktop-text { display: none; }
 
       body {
-        line-height: 1.62;
-        padding-bottom: 92px;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        gap: 22px;
-        padding: 38px 22px 42px;
-      }
-
-      .hero-image-wrap {
-        order: -1;
-      }
-
-      .hero-image-wrap .hero-image-card {
-        width: min(250px, 70vw);
-      }
-
-      .hero-image-wrap .hero-image-card img {
-        border-radius: 22px;
-      }
-
-      .image-caption {
-        display: none;
-      }
-
-      .hero-text {
-        text-align: center;
-      }
-
-      .eyebrow {
-        margin-bottom: 8px;
-        font-size: 16px;
-        line-height: 1.5;
-        display: block;
-      }
-
-      h1 {
-        margin-bottom: 14px;
-        font-size: clamp(34px, 10vw, 46px);
-        line-height: 1.12;
-      }
-
-      h2 {
-        margin-bottom: 20px;
-        font-size: clamp(31px, 8.6vw, 42px);
-        line-height: 1.18;
-      }
-
-      h3 {
-        font-size: 24px;
-        line-height: 1.25;
-      }
-
-      .subtitle {
-        margin-bottom: 22px;
-        font-size: 20px;
+        margin: 0;
+        font-family: var(--font-body);
+        color: var(--text);
+        background:
+          radial-gradient(
+            circle at 12% 8%,
+            rgba(63, 98, 88, 0.06),
+            transparent 24%
+          ),
+          radial-gradient(
+            circle at 88% 14%,
+            rgba(39, 66, 79, 0.06),
+            transparent 20%
+          ),
+          linear-gradient(180deg, #fdfcf9 0%, var(--bg) 50%, #eee5d8 100%);
         line-height: 1.72;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
       }
 
-      .actions {
-        justify-content: center;
-        gap: 10px;
-        margin-top: 22px;
+      img {
+        display: block;
+        max-width: 100%;
       }
 
-      .hero .actions {
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        overflow: clip;
+      }
+
+      .svg-sprite {
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+      }
+
+      .hero,
+      .section,
+      .footer {
+        padding-inline: var(--page-padding);
+      }
+
+      /* Hero */
+      .hero {
+        padding-top: clamp(24px, 3.2vw, 44px);
+        padding-bottom: clamp(24px, 3.8vw, 54px);
+      }
+
+      .hero__shell,
+      .section__shell {
+        max-width: var(--container);
+        margin-inline: auto;
+      }
+
+      .hero__shell {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: clamp(18px, 2.2vw, 30px);
+        align-items: stretch;
+        position: relative;
+        overflow: hidden;
+        padding: clamp(30px, 4vw, 48px);
+        border: 1px solid rgba(39, 66, 79, 0.12);
+        border-radius: calc(var(--radius-xl) + 12px);
+        background:
+          linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.92),
+            rgba(250, 244, 236, 0.98)
+          ),
+          var(--surface);
+        box-shadow:
+          var(--shadow-elevated),
+          0 10px 28px rgba(18, 52, 59, 0.05);
+        backdrop-filter: blur(10px);
+      }
+
+      .hero__visual {
+        position: relative;
+        width: min(100%, 500px);
+        aspect-ratio: 4 / 5;
+        margin-inline: auto;
+        border: 1px solid rgba(39, 66, 79, 0.1);
+        border-radius: calc(var(--radius-xl) + 4px);
+        background:
+          radial-gradient(
+            circle at 30% 28%,
+            rgba(255, 255, 255, 0.92),
+            transparent 24%
+          ),
+          radial-gradient(
+            circle at 70% 74%,
+            rgba(63, 98, 88, 0.12),
+            transparent 26%
+          ),
+          linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.88),
+            rgba(247, 240, 230, 0.92)
+          ),
+          rgba(255, 255, 255, 0.42);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.45),
+          var(--shadow-card);
+        overflow: hidden;
+        animation: lift-in 0.95s var(--ease) both;
+      }
+
+      .hero__content {
+        position: relative;
+        z-index: 1;
+        display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        max-width: 40rem;
+        margin-inline: auto;
+        text-align: center;
+        animation: lift-in 0.8s var(--ease) both;
       }
 
-      .hero .actions .btn {
+      .hero__content > *:last-child,
+      .section__shell > *:last-child,
+      .footer__contact > *:last-child {
+        margin-bottom: 0;
+      }
+
+      .hero__visual img {
+        position: relative;
+        z-index: 1;
         width: 100%;
-        max-width: 310px;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 12%;
+      }
+
+      .hero__visual::before,
+      .hero__visual::after {
+        content: "";
+        position: absolute;
+        border-radius: 999px;
+        pointer-events: none;
+        z-index: 2;
+      }
+
+      .hero__visual::before {
+        inset-inline-start: -36px;
+        top: 42px;
+        width: 180px;
+        height: 180px;
+        background: radial-gradient(
+          circle,
+          rgba(63, 98, 88, 0.18),
+          transparent 70%
+        );
+      }
+
+      .hero__visual::after {
+        inset-inline-end: 22px;
+        bottom: 38px;
+        width: 110px;
+        height: 110px;
+        background: radial-gradient(
+          circle,
+          rgba(39, 66, 79, 0.14),
+          transparent 70%
+        );
       }
 
       .btn {
-        min-height: 54px;
-        padding: 13px 20px;
-        border-radius: 999px;
-        font-size: 17px;
-      }
-
-      .trust-box {
-        grid-template-columns: 1fr;
-        gap: 12px;
-        max-width: 100%;
-        margin: 22px auto 0;
-      }
-
-      .trust-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 58px;
-        padding: 14px 18px;
-        border-radius: 16px;
-        font-size: 16px;
-      }
-
-      section {
-        padding: 50px 22px;
-      }
-
-      .section-title {
-        margin-bottom: 26px;
-      }
-
-      .section-title h2,
-      .text-block h2,
-      .credential-list h2,
-      .highlight h2,
-      .cta h2,
-      .card h3,
-      .step h3 {
-        font-size: clamp(28px, 8vw, 38px);
-        line-height: 1.2;
-        margin-bottom: 18px;
-        letter-spacing: -0.2px;
-      }
-
-      .cards,
-      .split,
-      .credentials,
-      .process {
-        grid-template-columns: 1fr;
-        gap: 22px;
-      }
-
-      .card,
-      .highlight,
-      .text-block,
-      .credential-list,
-      .step {
-        padding: 26px;
-        border-radius: 24px;
-      }
-
-      .card p,
-      .highlight p,
-      .text-block p,
-      .credential-list p,
-      .step p,
-      .card li,
-      .credential-list li,
-      .cta p {
-        font-size: 19px;
-        line-height: 1.78;
-      }
-
-      .card li {
-        padding: 5px 0;
-      }
-
-      .mobile-collapsible {
-        position: relative;
-      }
-
-      .mobile-collapsible.is-collapsed .collapsible-content {
-        max-height: 260px;
-      }
-
-      .mobile-collapsible.is-collapsed::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: 60px;
-        left: 0;
-        height: 52px;
-        border-radius: 0 0 26px 26px;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff 82%);
-        pointer-events: none;
-      }
-
-      .read-more-btn {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        margin-top: 14px;
-        padding: 9px 18px;
-        border: 1px solid #cfe4e0;
+        gap: 0.55em;
+        min-height: 56px;
+        padding: 15px 22px;
+        border: 1px solid transparent;
         border-radius: 999px;
-        background: #ffffff;
-        color: var(--primary-dark);
-        font-size: 15.5px;
+        background: var(--btn-bg, rgba(255, 255, 255, 0.9));
+        color: var(--btn-fg, var(--primary));
+        font-size: 16px;
         font-weight: 700;
-        cursor: pointer;
-        transition: background 0.2s, border-color 0.2s;
+        text-align: center;
+        box-shadow: var(--btn-shadow, 0 14px 28px rgba(18, 52, 59, 0.1));
+        transition:
+          transform 0.25s var(--ease),
+          box-shadow 0.25s var(--ease),
+          background 0.25s var(--ease),
+          border-color 0.25s var(--ease);
       }
 
-      .mid-cta {
-        margin-top: 26px;
+      .btn:hover {
+        transform: translateY(-1px);
+        box-shadow: var(--btn-shadow-hover, 0 18px 34px rgba(18, 52, 59, 0.14));
       }
 
-      .mid-cta .btn {
+      .btn:focus-visible {
+        transform: translateY(-1px);
+        outline: 3px solid rgba(63, 98, 88, 0.18);
+        outline-offset: 3px;
+      }
+
+      .btn--primary {
+        --btn-bg: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-2) 100%
+        );
+        --btn-fg: #fff;
+        --btn-shadow: 0 18px 36px rgba(39, 66, 79, 0.24);
+        --btn-shadow-hover: 0 22px 44px rgba(39, 66, 79, 0.3);
+      }
+
+      .btn--primary:hover {
+        --btn-bg: linear-gradient(135deg, #203543 0%, #345b51 100%);
+      }
+
+      .btn__icon {
+        display: inline-flex;
+        width: 1.05em;
+        height: 1.05em;
+        flex: 0 0 auto;
+      }
+
+      .btn__icon svg {
         width: 100%;
-        max-width: 320px;
+        height: 100%;
+        fill: currentColor;
       }
 
-      .cta {
-        padding: 56px 22px 62px;
-      }
-
-      .cta h2 {
-        font-size: clamp(31px, 8.5vw, 42px);
-      }
-
-      .mobile-sticky {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 20;
-        display: flex;
-        gap: 10px;
-        padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
-        background: rgba(255, 255, 255, 0.97);
-        box-shadow: 0 -8px 22px rgba(18, 52, 59, 0.08);
-        backdrop-filter: blur(12px);
-      }
-
-      .mobile-sticky .btn {
-        flex: 1;
-        min-width: auto;
-        min-height: 54px;
-        padding: 12px;
+      .hero__shell::before,
+      .hero__shell::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
         border-radius: 999px;
-        font-size: 18px;
+        filter: blur(6px);
       }
 
-      .mobile-sticky .btn-primary {
-        flex: 1.08;
-      }
-    }
-
-    @media (max-width: 420px) {
-      .hero {
-        padding: 34px 18px 40px;
-      }
-
-      section {
-        padding: 46px 18px;
+      .hero__shell::before {
+        top: -72px;
+        inset-inline-end: -48px;
+        width: 220px;
+        height: 220px;
+        background: radial-gradient(
+          circle,
+          rgba(63, 98, 88, 0.2),
+          transparent 68%
+        );
       }
 
+      .hero__shell::after {
+        bottom: -84px;
+        inset-inline-start: -42px;
+        width: 250px;
+        height: 250px;
+        background: radial-gradient(
+          circle,
+          rgba(39, 66, 79, 0.14),
+          transparent 70%
+        );
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 14px;
+        margin: 0 0 16px;
+        border: 1px solid rgba(39, 66, 79, 0.12);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.82);
+        color: var(--primary);
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        line-height: 1;
+        box-shadow: var(--shadow-soft);
+        backdrop-filter: blur(4px);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        font-family: var(--font-heading);
+        margin-bottom: 18px;
+        color: #13252d;
+        font-size: clamp(40px, 4.35vw, 66px);
+        line-height: 1.03;
+        letter-spacing: -0.03em;
+        font-weight: 900;
+        text-wrap: balance;
+      }
+
+      h2 {
+        font-family: var(--font-heading);
+        margin-bottom: 16px;
+        color: #17323a;
+        font-size: clamp(29px, 2.7vw, 42px);
+        line-height: 1.12;
+        letter-spacing: -0.025em;
+        font-weight: 900;
+        text-wrap: balance;
+      }
+
+      .section h2,
+      .panel h2 {
+        padding-bottom: 16px;
+        background-image: linear-gradient(
+          90deg,
+          var(--primary-2) 0%,
+          rgba(39, 66, 79, 0.14) 100%
+        );
+        background-repeat: no-repeat;
+        background-size: 68px 3px;
+        background-position: right bottom;
+      }
+
+      .section__head h2 {
+        display: inline-block;
+        background-position: center bottom;
+      }
+
+      .panel--accent h2 {
+        background-image: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.92) 0%,
+          rgba(255, 255, 255, 0.32) 100%
+        );
+      }
+
+      h3 {
+        font-family: var(--font-heading);
+        margin-bottom: 12px;
+        color: #17323a;
+        font-size: 23px;
+        line-height: 1.18;
+        letter-spacing: -0.02em;
+        font-weight: 900;
+        text-wrap: balance;
+      }
+
+      .lead {
+        max-width: 30rem;
+        margin-bottom: 22px;
+        color: #43535a;
+        font-size: clamp(18px, 1.7vw, 19px);
+        line-height: 1.9;
+        text-wrap: pretty;
+      }
+
+      .hero__actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: min(100%, 340px);
+        margin-inline: auto;
+      }
+
+      .hero__actions .btn {
+        width: 100%;
+      }
+
+      /* Sections */
+      .section {
+        padding-top: clamp(20px, 2.9vw, 30px);
+        padding-bottom: clamp(22px, 3.4vw, 42px);
+      }
+
+      .section__shell {
+        display: grid;
+        gap: var(--section-gap);
+      }
+
+      .section__shell--split {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .section__head {
+        max-width: 760px;
+        margin-inline: auto;
+        text-align: center;
+      }
+
+      /* Content cards */
+      .panel,
       .card,
-      .highlight,
-      .text-block,
-      .credential-list,
       .step {
-        padding: 24px;
-        border-radius: 23px;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(39, 66, 79, 0.1);
+        border-radius: calc(var(--radius-xl) - 2px);
+        background:
+          linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.98),
+            rgba(249, 244, 237, 0.99)
+          ),
+          var(--surface-strong);
+        box-shadow:
+          var(--shadow-card),
+          inset 0 1px 0 rgba(255, 255, 255, 0.45);
+        backdrop-filter: blur(6px);
+        transition:
+          transform 0.35s var(--ease),
+          box-shadow 0.35s var(--ease),
+          border-color 0.35s var(--ease);
       }
 
-      .mobile-sticky .btn {
-        min-height: 52px;
+      @media (hover: hover) and (pointer: fine) {
+        .panel:hover,
+        .card:hover,
+        .step:hover {
+          transform: translateY(-4px);
+          border-color: rgba(39, 66, 79, 0.14);
+          box-shadow:
+            0 24px 52px rgba(18, 52, 59, 0.11),
+            inset 0 1px 0 rgba(255, 255, 255, 0.55);
+        }
+
+        .panel--accent:hover {
+          transform: translateY(-4px);
+          box-shadow:
+            0 24px 48px rgba(39, 66, 79, 0.2),
+            inset 0 1px 0 rgba(255, 255, 255, 0.12);
+        }
+      }
+
+      .panel {
+        padding: clamp(28px, 3.2vw, 38px);
+      }
+
+      .panel::before,
+      .card::before,
+      .step::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.24), transparent 34%),
+          radial-gradient(
+            circle at top right,
+            rgba(63, 98, 88, 0.08),
+            transparent 28%
+          );
+        pointer-events: none;
+      }
+
+      .panel p,
+      .card li,
+      .step p,
+      .main__cta p {
+        color: #41545b;
+        font-size: 18px;
+        line-height: 1.86;
+        text-wrap: pretty;
+      }
+
+      .panel p:last-child,
+      .card ul:last-child,
+      .step p:last-child {
+        margin-bottom: 0;
+      }
+
+      .panel--accent {
+        background:
+          radial-gradient(
+            circle at top right,
+            rgba(255, 255, 255, 0.16),
+            transparent 24%
+          ),
+          linear-gradient(145deg, #18313b 0%, #274652 54%, #3a5f58 100%);
+        color: rgba(255, 255, 255, 0.95);
+        box-shadow:
+          0 18px 42px rgba(39, 66, 79, 0.16),
+          inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      }
+
+      .panel--accent h2,
+      .panel--accent p {
+        color: inherit;
+      }
+
+      .panel--list ul,
+      .card ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .panel--list li,
+      .card li {
+        position: relative;
+        padding: 8px 0 8px 18px;
+      }
+
+      .panel--list li::before,
+      .card li::before {
+        content: "•";
+        position: absolute;
+        right: 0;
+        color: var(--primary-2);
+      }
+
+      .panel--list {
+        padding-block: clamp(26px, 3vw, 36px);
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .card {
+        padding: clamp(25px, 2.8vw, 34px);
+      }
+
+      .card h3 {
+        margin-bottom: 14px;
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .step {
+        padding: 26px;
+      }
+
+      .step__index {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        margin-bottom: 14px;
+        border-radius: 999px;
+        background: linear-gradient(180deg, #f6efe6, #e8dbcc);
+        color: var(--primary);
+        font-weight: 800;
+        box-shadow: 0 8px 18px rgba(18, 52, 59, 0.08);
+      }
+
+      .main__cta {
+        max-width: 760px;
+        margin-inline: auto;
+        text-align: center;
+        --cta-btn-width: min(320px, 100%);
+      }
+
+      .section .main__cta {
+        max-width: 560px;
+        padding: 22px 24px 26px;
+        border-radius: 28px;
+        --cta-btn-width: min(290px, 100%);
+      }
+
+      .section .main__cta .btn {
+        --btn-bg: rgba(255, 255, 255, 0.88);
+        --btn-fg: var(--primary);
+        --btn-shadow: 0 12px 26px rgba(18, 52, 59, 0.08);
+        --btn-shadow-hover: 0 16px 32px rgba(18, 52, 59, 0.12);
+        border-color: rgba(39, 66, 79, 0.14);
+      }
+
+      .section .main__cta .btn:hover {
+        --btn-bg: rgba(255, 255, 255, 0.96);
+      }
+
+      .main__cta .btn {
+        min-height: 50px;
+        min-width: var(--cta-btn-width);
+      }
+
+      /* Footer */
+      .footer {
+        padding-top: 34px;
+        padding-bottom: 42px;
+        display: grid;
+        justify-items: center;
+        gap: 14px;
+        color: #6b7c81;
+        font-size: 15px;
+        text-align: center;
+        border-top: 1px solid rgba(39, 66, 79, 0.08);
+      }
+
+      .footer__copy {
+        max-width: 42rem;
+        margin: 0;
+        line-height: 1.8;
+        font-size: 14px;
+      }
+
+      .footer__contact {
+        display: grid;
+        justify-items: center;
+        gap: 10px;
+        width: min(100%, 344px);
+      }
+
+      .phone-fab {
+        width: 100%;
+        display: grid;
+        justify-items: center;
+        gap: 8px;
+      }
+
+      .phone-fab--mobile {
+        display: none;
+      }
+
+      .phone-fab > summary {
+        list-style: none;
+      }
+
+      .phone-fab > summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .phone-fab__toggle {
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .phone-fab__panel {
+        width: 100%;
+        padding: 11px 15px 12px;
+        border: 1px solid rgba(39, 66, 79, 0.1);
+        border-radius: 22px;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.98),
+            rgba(247, 240, 230, 0.99)
+          ),
+          var(--surface-strong);
+        box-shadow: var(--shadow-card);
+        backdrop-filter: blur(6px);
+      }
+
+      .phone-fab__panel p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.6;
+        text-align: center;
+      }
+
+      .phone-fab__panel p + p {
+        margin-top: 4px;
+      }
+
+      .phone-fab__panel a {
+        display: block;
+        width: fit-content;
+        margin-inline: auto;
+        margin-top: 6px;
+        color: var(--primary);
         font-size: 17px;
+        font-weight: 800;
+        letter-spacing: 0.015em;
       }
-    }
-  </style>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Structured Data (Schema.org) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalClinic",
-    "name": "אבישי שפר | עו״ס קליני ומטפל רגשי",
-    "description": "טיפול רגשי לילדים, נוער ומבוגרים סביב חרדה, טראומה, משברי חיים, קשיי קשב וריכוז והדרכת הורים. קליניקה בתל אביב ואונליין.",
-    "url": "https://avishay-therapy-git.avishaysheferr.workers.dev/",
-    "logo": "https://avishay-therapy-git.avishaysheferr.workers.dev/assets/images/favicon.png",
-    "image": "https://avishay-therapy-git.avishaysheferr.workers.dev/assets/images/hero-image.webp",
-    "telephone": "+972528592021",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "תל אביב",
-      "addressCountry": "IL"
-    },
-    "medicalSpecialty": "Psychiatric",
-    "availableService": {
-      "@type": "MedicalTest",
-      "name": "טיפול רגשי, הדרכת הורים, ופסיכותרפיה"
-    }
-  }
-  </script>
-</head>
-<body>
-  <header class="hero">
-    <div class="hero-text">
-      <div class="eyebrow">אבישי שפר | עו״ס קליני ומטפל רגשי M.S.W</div>
-      <h1>טיפול רגשי לילדים, נוער ומבוגרים</h1>
-      <p class="subtitle">
-        מרחב טיפולי אישי, בטוח ומכבד להתמודדות עם חרדה, דכדוך, טראומה, אובדן,
-        משברי חיים, קשיי קשב וריכוז, הדרכת הורים וקשיים בזוגיות, ביחסים ובמשפחה.
-      </p>
-      <div class="actions">
-        <a class="btn btn-primary" href="https://wa.me/972528592021?text=שלום%20אבישי,%20אשמח%20לפרטים%20נוספים..." aria-label="שלח הודעת וואטסאפ לאבישי שפר" target="_blank" rel="noopener noreferrer">לתיאום שיחת היכרות קצרה</a>
-        <a class="btn btn-secondary" href="tel:0528592021" aria-label="התקשר טלפונית לאבישי שפר">
-          <span class="desktop-text">052-8592021</span>
-          <span class="mobile-text">התקשרו עכשיו</span>
-        </a>
-      </div>
-      <ul class="trust-box">
-        <li class="trust-item">ילדים ונוער</li>
-        <li class="trust-item">הורים ומשפחות</li>
-        <li class="trust-item">מבוגרים</li>
-      </ul>
+
+      .phone-number {
+        direction: ltr;
+        unicode-bidi: plaintext;
+        font-variant-numeric: tabular-nums;
+      }
+
+      @keyframes lift-in {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+          filter: blur(3px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+          filter: blur(0);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+
+        .hero__content,
+        .hero__visual {
+          animation: none;
+        }
+      }
+
+      @media (min-width: 1081px) {
+        .hero__shell {
+          grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+          align-items: center;
+          gap: clamp(24px, 3vw, 42px);
+          padding: clamp(28px, 3.6vw, 42px);
+        }
+
+        .hero__visual {
+          width: min(100%, 460px);
+          justify-self: start;
+          margin-inline: 0;
+          order: 1;
+        }
+
+        .hero__content {
+          align-items: flex-start;
+          justify-self: end;
+          margin-inline: 0;
+          text-align: start;
+          max-width: 42rem;
+          order: 2;
+        }
+
+        .eyebrow,
+        .lead,
+        .hero__actions {
+          margin-inline: 0;
+        }
+
+        .hero__actions {
+          width: min(100%, 340px);
+          align-items: flex-start;
+        }
+
+        h1 {
+          font-size: clamp(42px, 4.1vw, 68px);
+          line-height: 1.02;
+        }
+
+        .lead {
+          max-width: 31rem;
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 1080px) {
+        .cards,
+        .steps {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .section__shell--split {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .hero,
+        .section,
+        .footer {
+          padding-inline: 14px;
+        }
+
+        .hero__shell {
+          padding: 20px;
+          border-radius: 30px;
+        }
+
+        .eyebrow {
+          font-size: 14px;
+        }
+
+        h1 {
+          font-size: clamp(34px, 10vw, 46px);
+        }
+
+        .lead {
+          font-size: 18px;
+        }
+
+        .hero__actions {
+          width: 100%;
+        }
+
+        .hero__visual {
+          min-height: 240px;
+        }
+
+        .hero__visual img {
+          object-position: center 8%;
+        }
+
+        .panel,
+        .card,
+        .step {
+          border-radius: 24px;
+        }
+
+        .panel {
+          padding: 22px;
+        }
+
+        .cards,
+        .steps {
+          grid-template-columns: 1fr;
+        }
+
+        .panel p,
+        .card li,
+        .step p,
+        .main__cta p {
+          font-size: 17px;
+        }
+
+        .main__cta .btn {
+          min-width: 100%;
+        }
+
+        .section .main__cta {
+          max-width: 100%;
+          padding: 20px;
+        }
+
+        .footer {
+          padding-top: 30px;
+          padding-bottom: 34px;
+        }
+
+        .footer__copy {
+          font-size: 13px;
+        }
+
+        .phone-fab__panel {
+          padding: 10px 14px 11px;
+        }
+
+        .phone-fab__toggle .btn {
+          min-height: 46px;
+          padding: 11px 15px;
+          border-radius: 18px;
+          font-size: 15px;
+          box-shadow: 0 14px 28px rgba(18, 52, 59, 0.12);
+        }
+
+        .phone-fab__toggle .btn__icon {
+          width: 0.95em;
+          height: 0.95em;
+        }
+
+        .phone-fab__panel a {
+          font-size: 16px;
+        }
+      }
+
+      @media (max-width: 460px) {
+        .hero__shell {
+          padding: 18px;
+        }
+
+        .hero__visual {
+          min-height: 200px;
+        }
+
+        .hero__visual img {
+          object-position: center 4%;
+        }
+
+        .panel,
+        .card,
+        .step {
+          border-radius: 20px;
+        }
+
+        .step {
+          padding: 22px;
+        }
+
+        .btn {
+          min-height: 52px;
+          padding-inline: 18px;
+        }
+      }
+
+      @media (hover: none) and (pointer: coarse) {
+        .phone-fab > summary,
+        .phone-fab__panel {
+          display: none;
+        }
+
+        .phone-fab--desktop {
+          display: none;
+        }
+
+        .phone-fab--mobile {
+          display: inline-flex;
+          width: min(100%, 320px);
+          margin: 10px auto 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <svg class="svg-sprite" aria-hidden="true" focusable="false">
+        <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+          <path
+            d="M20.5 3.5A11.9 11.9 0 0 0 12.1 0C5.5 0 .2 5.3.2 11.9c0 2.1.5 4.1 1.5 5.9L0 24l6.4-1.7a11.8 11.8 0 0 0 5.7 1.5h0c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.3-6.2-3.5-8.4Zm-8.4 18.3h0a9.9 9.9 0 0 1-5.1-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.9 9.9 0 1 1 8.5 4.7Zm5.7-7.3c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2c-.2.3-.8 1-.9 1.2s-.3.2-.6.1a8 8 0 0 1-2.3-1.4 8.7 8.7 0 0 1-1.6-2c-.2-.3 0-.5.1-.7l.4-.5c.1-.2.2-.4.3-.6.1-.2 0-.4 0-.6s-.7-1.8-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.2 1.4 3.4c.2.2 2.6 4 6.3 5.5.9.4 1.6.6 2.2.8.9.3 1.7.2 2.3.1.7-.1 1.8-.8 2-1.6.2-.8.2-1.5.1-1.6-.1-.1-.3-.2-.6-.4Z"
+          ></path>
+        </symbol>
+        <symbol id="icon-phone" viewBox="0 0 24 24">
+          <path
+            d="M6.6 2.5h3.3c.7 0 1.2.4 1.5 1l1.2 2.9c.2.6.1 1.2-.3 1.7l-1.8 1.9a14.5 14.5 0 0 0 6 6l1.9-1.8c.5-.4 1.1-.5 1.7-.3l2.9 1.2c.6.3 1 .8 1 1.5v3.3c0 .8-.5 1.4-1.3 1.5-1.5.2-3.1.1-4.6-.3a22.6 22.6 0 0 1-8.5-4.4 22.6 22.6 0 0 1-4.4-8.5c-.4-1.5-.5-3.1-.3-4.6.1-.8.8-1.3 1.5-1.3Z"
+          ></path>
+        </symbol>
+      </svg>
+      <!-- Hero -->
+      <header class="hero">
+        <div class="hero__shell">
+          <div class="hero__visual">
+            <img
+              src="assets/images/hero-image.webp"
+              alt="אבישי שפר, עו״ס קליני ומטפל רגשי M.S.W"
+            />
+          </div>
+
+          <div class="hero__content">
+            <p class="eyebrow">אבישי שפר | עו״ס קליני ומטפל רגשי M.S.W</p>
+            <h1>טיפול רגשי לילדים ונוער, הורים ומבוגרים</h1>
+            <p class="lead">
+              מרחב בטוח ומכבד לליווי רגשי בתהליכי קושי, שינוי ומשבר.
+            </p>
+
+            <div class="hero__actions">
+              <a
+                class="btn btn--primary"
+                href="https://wa.me/972528592021?text=שלום%20אבישי,%20אשמח%20לפרטים%20נוספים..."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="btn__icon" aria-hidden="true">
+                  <svg aria-hidden="true" focusable="false">
+                    <use href="#icon-whatsapp"></use>
+                  </svg>
+                </span>
+                <span>שיחת היכרות</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main content -->
+      <main>
+        <!-- About -->
+        <section class="section">
+          <div class="section__shell section__shell--split">
+            <article class="panel">
+              <h2>אודותי</h2>
+              <p>
+                אני אבישי שפר, עו״ס קליני ומטפל רגשי M.S.W, בהכשרה בפסיכותרפיה
+                יונגיאנית. אני מלווה ילדים, הורים, משפחות ומבוגרים בתהליכי קושי,
+                משבר ושינוי, מתוך ניסיון בעבודה טיפולית, חינוכית ומערכתית, ומתוך
+                קשב אנושי, רגיש ומכבד לכל אדם שמגיע.
+              </p>
+              <p>
+                אני רואה בטיפול מפגש בין מקצועיות, נוכחות אנושית והקשבה אמיתית
+                לצרכים שעולים בכל שלב של החיים. חשוב לי ליצור מרחב שבו אפשר
+                להרגיש מובן, בטוח ומכובד.
+              </p>
+            </article>
+
+            <article class="panel panel--accent">
+              <h2>הגישה שלי</h2>
+              <p>
+                אני מאמין שטיפול רגשי טוב מתחיל בקשר בטוח, מכבד וקשוב. בתוך מרחב
+                כזה אפשר להתבונן בקושי לעומק, לזהות כוחות פנימיים ולבנות שינוי
+                בקצב שמתאים למטופל, מתוך תחושה שיש עם מי לעבור את הדרך באופן
+                מקצועי, יציב ומכיל.
+              </p>
+              <p>
+                בעיניי, טיפול משמעותי אינו נמדד רק בהקלה מיידית, אלא גם ביכולת
+                להבין את מקור הקושי, לעבד אותו, ולבנות בהדרגה תנועה יציבה יותר
+                בחיים ובקשרים.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Services -->
+        <section class="section">
+          <div class="section__shell">
+            <div class="section__head">
+              <h2>במה אני מטפל?</h2>
+            </div>
+
+            <div class="cards">
+              <article class="card">
+                <h3>טיפול רגשי לילדים ונוער</h3>
+                <ul>
+                  <li>חרדה, ויסות רגשי וקשיי הסתגלות</li>
+                  <li>גבולות, קשרים חברתיים והתמודדות בבית ובמסגרת</li>
+                  <li>קשיי קשב וריכוז</li>
+                  <li>ליווי ילדים ובני נוער על הרצף האוטיסטי</li>
+                </ul>
+              </article>
+
+              <article class="card">
+                <h3>הדרכת הורים</h3>
+                <ul>
+                  <li>הצבת גבולות ותקשורת בבית</li>
+                  <li>הכוונה רגשית והתמודדות עם קונפליקטים</li>
+                  <li>תמיכה במשפחה במצבי קושי ומשבר</li>
+                </ul>
+              </article>
+
+              <article class="card">
+                <h3>טיפול רגשי במבוגרים</h3>
+                <ul>
+                  <li>חרדה, דכדוך ותחושת תקיעות</li>
+                  <li>משברי חיים, אובדן ושינויים משמעותיים</li>
+                  <li>קשיים בזוגיות ובמערכות יחסים</li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="main__cta">
+              <a
+                class="btn btn--primary"
+                href="https://wa.me/972528592021?text=שלום%20אבישי,%20אשמח%20לפרטים%20נוספים..."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="btn__icon" aria-hidden="true">
+                  <svg aria-hidden="true" focusable="false">
+                    <use href="#icon-whatsapp"></use>
+                  </svg>
+                </span>
+                <span>פרטים נוספים</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Treatment -->
+        <section class="section">
+          <div class="section__shell">
+            <article class="panel">
+              <h2>איך נראה הטיפול?</h2>
+              <p>
+                הטיפול מתקיים במרחב בטוח, מכבד וקשוב, שמאפשר לעצור, להתבונן
+                ולהבין לעומק מה מתרחש בפנים ובקשרים עם אחרים, בלי למהר ובלי
+                לשפוט. במהלך הטיפול נבחן יחד כיצד חוויות עבר, דפוסי תקשורת
+                וקשרים משמעותיים משפיעים על מחשבות, רגשות ודרכי ההתמודדות בהווה.
+              </p>
+              <p>
+                כבר בתחילת הדרך נבין יחד מה מביא אותך לטיפול, מה חשוב לך, ומהו
+                הקצב הנכון עבורך. משם נבנה שפה משותפת שתאפשר התבוננות, עיבוד
+                ושינוי. בעבודה עם ילדים ונוער הטיפול מותאם לגיל וליכולת הביטוי,
+                ויכול לשלב שיחה, משחק, יצירה והתבוננות רגשית. בעבודה עם הורים
+                ניתן מקום גם לקושי של הילד וגם להתמודדות בבית, כדי לבנות תגובה
+                מדויקת יותר וחיזוק של הקשר.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="section">
+          <div class="section__shell">
+            <article class="panel">
+              <h2>ניסיון מקצועי</h2>
+              <p>
+                במהלך השנים צברתי ניסיון בליווי ילדים, הורים ומבוגרים במסגרות
+                טיפוליות, חינוכיות ושיקומיות. עבדתי עם מצבי טראומה ומשבר, קשיי
+                קשב וריכוז, ליווי ילדים ובני נוער על הרצף האוטיסטי, ואתגרים
+                רגשיים ומשפחתיים שונים.
+              </p>
+              <p>
+                ניסיון זה מאפשר לי להתבונן במטופל באופן רחב, ולהתאים את המענה
+                לצרכים, לקצב ולנסיבות החיים של כל אדם.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Qualifications -->
+        <section class="section">
+          <div class="section__shell section__shell--split">
+            <article class="panel panel--list">
+              <h2>הכשרה ורקע מקצועי</h2>
+              <ul>
+                <li>
+                  עו״ס קליני, בעל תואר שני בעבודה סוציאלית M.S.W מאוניברסיטת
+                  אריאל, במגמת פרט, ילד ומשפחה
+                </li>
+                <li>בהכשרה בפסיכותרפיה יונגיאנית</li>
+                <li>בעל ניסיון בעבודה טיפולית, חינוכית ומערכתית</li>
+              </ul>
+            </article>
+
+            <article class="panel panel--accent">
+              <h2>מתי כדאי לפנות?</h2>
+              <p>
+                כשיש קושי שחוזר על עצמו, תחושת תקיעות, שינוי משמעותי, משבר, או
+                צורך בהכוונה מקצועית סביב ילד, הורות, זוגיות או התמודדות רגשית.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Getting started -->
+        <section class="section">
+          <div class="section__shell">
+            <div class="section__head">
+              <h2>איך מתחילים?</h2>
+              <p>
+                טיפול הוא בראש ובראשונה קשר אנושי, ולכן אני נוהג להתחיל בכמה
+                מפגשי היכרות, בדרך כלל שניים, כדי לבדוק התאמה. במפגשים אלו אני
+                מציג את דרך העבודה שלי ושומע מעט על הרקע, נסיבות החיים והסיבה
+                לפנייה.
+              </p>
+              <p>
+                אין צורך להגיע עם ניסוח מסודר מראש; אפשר פשוט להתחיל ממה
+                שמטריד אותך.
+              </p>
+              <p>משך כל מפגש הוא כ-45 דקות.</p>
+              <p>הטיפול מתקיים בקליניקה בתל אביב ובאונליין.</p>
+            </div>
+
+            <div class="steps">
+              <article class="step">
+                <span class="step__index">1</span>
+                <h3>יוצרים קשר</h3>
+                <p>פונים לתיאום שיחת היכרות קצרה.</p>
+              </article>
+              <article class="step">
+                <span class="step__index">2</span>
+                <h3>מבינים את הצורך</h3>
+                <p>נשוחח על הקושי, הרקע והציפייה מהטיפול.</p>
+              </article>
+              <article class="step">
+                <span class="step__index">3</span>
+                <h3>מתאימים מסגרת</h3>
+                <p>
+                  נחליט יחד על טיפול רגשי, הדרכת הורים, טיפול דיאדי או ליווי
+                  רגשי למבוגר.
+                </p>
+              </article>
+              <article class="step">
+                <span class="step__index">4</span>
+                <h3>מתחילים תהליך</h3>
+                <p>הטיפול מתקדם בקצב שמתאים למטופל ולמציאות חייו.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="section">
+          <div class="section__shell">
+            <article class="panel panel--accent main__cta">
+              <h2>לפעמים הצעד הראשון הוא פשוט לדבר</h2>
+              <p>
+                מוזמנים לשיחת היכרות קצרה, לשאול שאלות ולהבין יחד מה נכון.
+              </p>
+              <p>
+                <a
+                  class="btn btn--primary"
+                  href="https://wa.me/972528592021?text=שלום%20אבישי,%20אשמח%20לפרטים%20נוספים..."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="btn__icon" aria-hidden="true">
+                    <svg aria-hidden="true" focusable="false">
+                      <use href="#icon-whatsapp"></use>
+                    </svg>
+                  </span>
+                  <span>וואטסאפ</span>
+                </a>
+              </p>
+              <p>
+                <a class="phone-number" href="tel:0528592021"
+                  >052&#8209;8592021</a
+                >
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p class="footer__copy">
+          אבישי שפר | Avishay Shefer | עו״ס קליני ומטפל רגשי M.S.W | קליניקה בתל
+          אביב ובאונליין
+        </p>
+
+        <div class="footer__contact">
+          <details class="phone-fab phone-fab--desktop">
+            <summary class="phone-fab__toggle">
+              <span class="btn btn--primary">
+                <span class="btn__icon" aria-hidden="true">
+                  <svg aria-hidden="true" focusable="false">
+                    <use href="#icon-phone"></use>
+                  </svg>
+                </span>
+                <span>טלפון</span>
+              </span>
+            </summary>
+            <div class="phone-fab__panel" role="status" aria-live="polite">
+              <p>יצירת קשר</p>
+              <p>
+                <a class="phone-number" href="tel:0528592021"
+                  >052&#8209;8592021</a
+                >
+              </p>
+            </div>
+          </details>
+
+          <a
+            class="phone-fab__call phone-fab--mobile btn btn--primary"
+            href="tel:0528592021"
+          >
+            <span class="btn__icon" aria-hidden="true">
+              <svg aria-hidden="true" focusable="false">
+                <use href="#icon-phone"></use>
+              </svg>
+            </span>
+            <span>חיוג&nbsp;ישיר</span>
+          </a>
+        </div>
+      </footer>
     </div>
-    <div class="hero-image-wrap">
-      <div class="hero-image-card">
-        <img src="assets/images/hero-image.webp" width="800" height="1000" alt="אבישי שפר, עו״ס קליני ומטפל רגשי" fetchpriority="high">
-        <div class="image-caption">אבישי שפר | עו״ס קליני ומטפל רגשי M.S.W</div>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section>
-      <div class="section-inner split">
-        <div class="text-block">
-          <h2>נעים להכיר</h2>
-          <p>
-            אני אבישי שפר, עו״ס קליני ומטפל רגשי M.S.W, בהכשרה בפסיכותרפיה יונגיאנית.
-            אני מלווה ילדים, בני נוער, הורים ומבוגרים במצבי קושי, משבר ושינוי,
-            מתוך ניסיון בעבודה טיפולית, חינוכית ומערכתית.
-          </p>
-        </div>
-        <div class="highlight">
-          <h2>הגישה שלי</h2>
-          <p>
-            אני מאמין שטיפול רגשי טוב מתחיל בקשר בטוח, מכבד וקשוב.
-            בתוך מרחב כזה אפשר להבין את הקושי, לגלות כוחות פנימיים
-            ולבנות שינוי בקצב שמתאים למטופל.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-inner">
-        <div class="section-title">
-          <h2>במה אני מטפל?</h2>
-        </div>
-        <div class="cards">
-          <div class="card">
-            <h3>טיפול רגשי לילדים ונוער</h3>
-            <ul>
-              <li>חרדה והתמודדות רגשית</li>
-              <li>התפרצויות וקשיי ויסות רגשי</li>
-              <li>גבולות וקשיים התנהגותיים</li>
-              <li>קשיים חברתיים וקשיי הסתגלות למסגרות</li>
-              <li>קשיי קשב וריכוז</li>
-              <li>ליווי ילדים ובני נוער על הרצף האוטיסטי</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>הדרכת הורים ומשפחה</h3>
-            <ul>
-              <li>הצבת גבולות והתמודדות עם התפרצויות</li>
-              <li>קשיי תקשורת בבית</li>
-              <li>קונפליקטים במשפחה</li>
-              <li>טיפול דיאדי הורה ילד</li>
-              <li>ליווי משפחות במצבי קושי ומשבר</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>טיפול רגשי במבוגרים</h3>
-            <ul>
-              <li>חרדה, דכדוך ותחושת תקיעות</li>
-              <li>טראומה, אובדן ומשברי חיים</li>
-              <li>קשיים בזוגיות ובמערכות יחסים</li>
-              <li>פרידה, גירושין ושינויים משמעותיים</li>
-              <li>התמודדות עם עומס רגשי</li>
-            </ul>
-          </div>
-        </div>
-        <div class="mid-cta">
-          <a class="btn btn-primary" href="https://wa.me/972528592021?text=שלום%20אבישי,%20אשמח%20לפרטים%20נוספים..." aria-label="שלח הודעת וואטסאפ לאבישי שפר" target="_blank" rel="noopener noreferrer">לתיאום שיחת היכרות קצרה</a>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-inner text-block mobile-collapsible is-collapsed">
-        <h2>איך נראה הטיפול?</h2>
-        <div class="collapsible-content">
-        <p>
-          הטיפול מתקיים במרחב בטוח, מכבד וקשוב, שבו אפשר לעצור ולהתבונן במה שמתרחש
-          בפנים ובקשרים עם אחרים. במהלך הטיפול ננסה להבין כיצד חוויות עבר,
-          דפוסי תקשורת וקשרים משמעותיים משפיעים על מחשבות, רגשות ודרכי התמודדות בהווה.
-        </p>
-        <p>
-          דרך השיח הטיפולי ניתן לזהות דפוסים שחוזרים על עצמם, מחשבות אוטומטיות
-          ותגובות רגשיות, ולהבין כיצד הם משפיעים על זוגיות, משפחה, קשר עם הילדים,
-          עבודה ומערכות יחסים קרובות. מתוך ההבנה הזו ניתן לבנות בהדרגה אפשרויות
-          חדשות לקשר, בחירה והתמודדות.
-        </p>
-        <p>
-          בעבודה עם ילדים ונוער, הטיפול מותאם לגיל וליכולת הביטוי, ויכול לשלב שיחה,
-          משחק, יצירה והתבוננות רגשית. בעבודה עם הורים ניתן מקום גם לקושי של הילד
-          וגם להתמודדות בבית. יחד ננסה להבין מה הילד מבטא דרך ההתנהגות,
-          ולבנות דרכי תגובה מותאמות סביב גבולות, תקשורת וחיזוק הקשר.
-        </p>
-      
-        </div>
-        <button class="read-more-btn" type="button" aria-expanded="false">קרא עוד</button></div>
-    </section>
-
-    <section>
-      <div class="section-inner text-block mobile-collapsible is-collapsed">
-        <h2>ניסיון מקצועי</h2>
-        <div class="collapsible-content">
-        <p>
-          במהלך השנים צברתי ניסיון בליווי ילדים, בני נוער, הורים ומשפחות במסגרות טיפוליות,
-          חינוכיות ושיקומיות. עסקתי בטיפול רגשי פרטני, הדרכת הורים, טיפול דיאדי הורה ילד,
-          הנחיית קבוצות וליווי במצבי קושי, משבר וסיכון.
-        </p>
-        <p>
-          כמו כן, צברתי ניסיון בליווי מצבי טראומה ומשבר, קשיי קשב וריכוז, נוער בסיכון,
-          ילדים ובני נוער על הרצף האוטיסטי ובני משפחותיהם.
-        </p>
-        <p>
-          ניסיון זה מאפשר לי להתבונן במטופל באופן רחב: בעולמו הפנימי,
-          בקשרים המשמעותיים בחייו, במשפחה ובסביבה שבה הוא חי.
-        </p>
-      
-        </div>
-        <button class="read-more-btn" type="button" aria-expanded="false">קרא עוד</button></div>
-    </section>
-
-    <section>
-      <div class="section-inner credentials">
-        <div class="credential-list">
-          <h2>הכשרה ורקע מקצועי</h2>
-          <ul>
-            <li>עו״ס קליני, בעל תואר שני בעבודה סוציאלית M.S.W</li>
-            <li>בהכשרה בפסיכותרפיה יונגיאנית</li>
-            <li>בעל ניסיון בעבודה טיפולית, חינוכית ומערכתית</li>
-          </ul>
-        </div>
-        <div class="highlight">
-          <h2>מתי כדאי לפנות?</h2>
-          <p>
-            כשיש קושי שחוזר על עצמו, תחושת תקיעות, שינוי משמעותי, משבר,
-            או צורך בהכוונה מקצועית סביב ילד, הורות, זוגיות או התמודדות רגשית.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-inner">
-        <div class="section-title">
-          <h2>איך מתחילים?</h2>
-          <p>אפשר להתחיל בשיחת היכרות קצרה, להבין יחד מה הקושי ומה סוג הליווי המתאים.</p>
-          <p>הטיפול מתקיים בקליניקה בתל אביב ובאונליין.</p>
-        </div>
-        <div class="process">
-          <div class="step">
-            <h3>יוצרים קשר</h3>
-            <p>משאירים הודעה או מתקשרים לתיאום שיחת היכרות קצרה.</p>
-          </div>
-          <div class="step">
-            <h3>מבינים את הצורך</h3>
-            <p>נשוחח על הקושי, הרקע והציפייה מהטיפול.</p>
-          </div>
-          <div class="step">
-            <h3>מתאימים מסגרת</h3>
-            <p>נחליט יחד על טיפול רגשי, הדרכת הורים, טיפול דיאדי או ליווי רגשי למבוגר.</p>
-          </div>
-          <div class="step">
-            <h3>מתחילים תהליך</h3>
-            <p>הטיפול מתקדם בקצב שמתאים למטופל ולמציאות חייו.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <h2>לפעמים הצעד הראשון הוא פשוט לדבר</h2>
-      <p>מוזמנים לפנות לשיחת היכרות קצרה, לשאול שאלות ולהבין יחד מה נכון.</p>
-      <div class="actions" style="justify-content:center">
-        <a class="btn btn-primary" href="https://wa.me/972528592021?text=שלום%20אבישי,%20אשמח%20לפרטים%20נוספים..." aria-label="שלח הודעת וואטסאפ לאבישי שפר" target="_blank" rel="noopener noreferrer">שלחו הודעה בוואטסאפ</a>
-        <a class="btn btn-secondary" href="tel:0528592021" aria-label="התקשר טלפונית לאבישי שפר">
-          <span class="desktop-text">052-8592021</span>
-          <span class="mobile-text">התקשרו</span>
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    אבישי שפר | Avishay Shefer | עו״ס קליני ומטפל רגשי M.S.W | טיפול רגשי בתל אביב ובאונליין
-  </footer>
-
-  <div class="mobile-sticky">
-    <a class="btn btn-primary" href="https://wa.me/972528592021?text=שלום%20אבישי,%20אשמח%20לפרטים%20נוספים..." aria-label="שלח הודעת וואטסאפ לאבישי שפר" target="_blank" rel="noopener noreferrer">וואטסאפ</a>
-    <a class="btn btn-secondary" href="tel:0528592021" aria-label="התקשר טלפונית לאבישי שפר">
-      <span class="desktop-text">052-8592021</span>
-      <span class="mobile-text">התקשר</span>
-    </a>
-  </div>
-
-  <script>
-    (function () {
-      const buttons = document.querySelectorAll('.mobile-collapsible .read-more-btn');
-
-      buttons.forEach((button) => {
-        button.addEventListener('click', () => {
-          const section = button.closest('.mobile-collapsible');
-
-          if (!section) return;
-
-          const isCollapsed = section.classList.toggle('is-collapsed');
-          button.textContent = isCollapsed ? 'קרא עוד' : 'סגור';
-          button.setAttribute('aria-expanded', String(!isCollapsed));
-        });
-      });
-    }());
-  </script>
-</body>
+  </body>
 </html>
