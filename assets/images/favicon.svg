@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Avishay Shefer favicon">
+  <rect width="512" height="512" rx="118" fill="#FAF7F2"/>
+  <circle cx="256" cy="256" r="188" fill="#F4ECE2" stroke="#D9CAB9" stroke-width="10"/>
+  <path
+    d="M378 128C292 184 227 288 134 390"
+    fill="none"
+    stroke="#27424F"
+    stroke-width="34"
+    stroke-linecap="round"
+  />
+  <path
+    d="M334 154C312 225 269 252 222 273"
+    fill="none"
+    stroke="#3F6258"
+    stroke-width="28"
+    stroke-linecap="round"
+  />
+  <path
+    d="M162 366C190 292 239 258 294 210"
+    fill="none"
+    stroke="#27424F"
+    stroke-width="28"
+    stroke-linecap="round"
+  />
+</svg>
