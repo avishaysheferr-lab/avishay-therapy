@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://avishay-therapy-git.avishaysheferr.workers.dev/sitemap.xml
