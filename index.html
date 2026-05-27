@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>‏אבישי שפר · מטפל רגשי בתל אביב ואונליין‏</title>
+    <title>אבישי שפר</title>
     <meta
       name="description"
-      content="אבישי שפר, עובד סוציאלי קליני, עו״ס קליני ומטפל רגשי M.S.W. טיפול רגשי לילדים, נוער ומבוגרים סביב חרדה, דכדוך, טראומה, אובדן, משברי חיים, קשיי קשב וריכוז והדרכת הורים."
+      content="אבישי שפר, עובד סוציאלי קליני, עו״ס קליני ומטפל רגשי M.S.W. טיפול רגשי לילדים, נוער ומבוגרים סביב חרדה, דיכאון, טראומה, אובדן, משברי חיים, קשיי קשב וריכוז והדרכת הורים."
     />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="אבישי שפר" />
@@ -16,8 +16,8 @@
     />
     <meta property="og:locale" content="he_IL" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="‏אבישי שפר · טיפול רגשי‏" />
-    <meta property="og:title" content="‏אבישי שפר · מטפל רגשי‏" />
+    <meta property="og:site_name" content="אבישי שפר" />
+    <meta property="og:title" content="אבישי שפר" />
     <meta
       property="og:description"
       content="טיפול רגשי לילדים, נוער, הורים ומבוגרים בתל אביב ובאונליין, במרחב בטוח, מקצועי וקשוב."
@@ -28,21 +28,21 @@
     />
     <meta
       property="og:image"
-      content="https://avishay-therapy-git.avishaysheferr.workers.dev/assets/images/og-image.jpg?v=3"
+      content="https://avishay-therapy-git.avishaysheferr.workers.dev/assets/images/og-image.jpg?v=4"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="אבישי שפר, מטפל רגשי" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="‏אבישי שפר · מטפל רגשי‏" />
+    <meta name="twitter:title" content="אבישי שפר" />
     <meta
       name="twitter:description"
       content="טיפול רגשי לילדים, נוער, הורים ומבוגרים בתל אביב ובאונליין."
     />
     <meta
       name="twitter:image"
-      content="https://avishay-therapy-git.avishaysheferr.workers.dev/assets/images/og-image.jpg?v=3"
+      content="https://avishay-therapy-git.avishaysheferr.workers.dev/assets/images/og-image.jpg?v=4"
     />
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="assets/images/favicon-32x32.png" sizes="32x32" />
@@ -63,7 +63,7 @@
         "alternateName": "Avishay Shefer",
         "description": "עובד סוציאלי קליני, עו״ס קליני ומטפל רגשי לילדים, נוער, הורים ומבוגרים בתל אביב ובאונליין.",
         "url": "https://avishay-therapy-git.avishaysheferr.workers.dev/",
-        "image": "https://avishay-therapy-git.avishaysheferr.workers.dev/assets/images/og-image.jpg?v=3",
+        "image": "https://avishay-therapy-git.avishaysheferr.workers.dev/assets/images/og-image.jpg?v=4",
         "telephone": "+972528592021",
         "areaServed": ["תל אביב", "ישראל", "אונליין"],
         "address": {
@@ -440,7 +440,7 @@
         border-radius: 999px;
         background: rgba(255, 255, 255, 0.82);
         color: var(--primary);
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 700;
         line-height: 1;
         box-shadow: var(--shadow-soft);
@@ -502,7 +502,7 @@
 
       h2 {
         font-family: var(--font-heading);
-        margin-bottom: var(--space-sm);
+        margin-bottom: clamp(18px, 2vw, 28px);
         color: #17323a;
         font-size: clamp(29px, 2.7vw, 42px);
         line-height: 1.12;
@@ -513,33 +513,20 @@
 
       .section h2,
       .panel h2 {
-        padding-bottom: var(--space-sm);
-        background-image: linear-gradient(
-          90deg,
-          var(--primary-2) 0%,
-          rgba(39, 66, 79, 0.14) 100%
-        );
-        background-repeat: no-repeat;
-        background-size: 68px 3px;
-        background-position: right bottom;
+        padding-bottom: 0;
       }
 
       .section__head h2 {
         display: inline-block;
-        background-position: center bottom;
       }
 
       .panel--accent h2 {
-        background-image: linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.92) 0%,
-          rgba(255, 255, 255, 0.32) 100%
-        );
+        background-image: none;
       }
 
       h3 {
         font-family: var(--font-heading);
-        margin-bottom: var(--space-xs);
+        margin-bottom: var(--space-sm);
         color: #17323a;
         font-size: 23px;
         line-height: 1.18;
@@ -587,20 +574,6 @@
         max-width: 760px;
         margin-inline: auto;
         text-align: center;
-      }
-
-      .section__head::before {
-        content: "";
-        display: block;
-        width: 34px;
-        height: 1px;
-        margin: 0 auto var(--space-sm);
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(39, 66, 79, 0.36),
-          transparent
-        );
       }
 
       /* Content cards */
@@ -760,16 +733,6 @@
 
       .card h3 {
         margin-bottom: var(--space-sm);
-      }
-
-      .card h3::after,
-      .step h3::after {
-        content: "";
-        display: block;
-        width: 28px;
-        height: 2px;
-        margin-top: var(--space-sm);
-        background: rgba(63, 98, 88, 0.28);
       }
 
       .steps {
@@ -1282,7 +1245,7 @@
             </p>
             <h1>טיפול רגשי לילדים ונוער, הורים ומבוגרים</h1>
             <p class="lead">
-              מרחב בטוח ומכבד לליווי רגשי בתהליכי קושי, שינוי ומשבר.
+              מרחב בטוח וקשוב לטיפול רגשי בתהליכי קושי, שינוי ומשבר.
             </p>
 
             <div class="hero__actions">
@@ -1297,7 +1260,7 @@
                     <use href="#icon-whatsapp"></use>
                   </svg>
                 </span>
-                <span>שיחת היכרות</span>
+                <span>ליצירת קשר</span>
               </a>
             </div>
           </div>
@@ -1308,29 +1271,26 @@
       <main>
         <!-- About -->
         <section class="section">
-          <div class="section__shell section__shell--split">
+          <div class="section__shell">
             <article class="panel">
               <h2>אודותי</h2>
               <p>
-                אני אבישי שפר, עו״ס קליני ומטפל רגשי M.S.W, בהכשרה בפסיכותרפיה
-                יונגיאנית. אני מלווה ילדים, הורים, משפחות ומבוגרים בתהליכי קושי,
-                משבר ושינוי, מתוך ניסיון בעבודה טיפולית, חינוכית ומערכתית, ומתוך
-                קשב אנושי, רגיש ומכבד לכל אדם שמגיע.
+                עובד סוציאלי קליני, בעל תואר שני בעבודה סוציאלית, מטפל רגשי
+                ובהכשרה בפסיכותרפיה יונגיאנית. אני מטפל בילדים, הורים, משפחות
+                ומבוגרים בתהליכי קושי, משבר ושינוי, מתוך ניסיון בעבודה טיפולית,
+                חינוכית ומערכתית, ומתוך קשב אנושי, רגיש ולא שיפוטי לכל אדם
+                שמגיע.
               </p>
               <p>
                 אני רואה בטיפול מפגש בין מקצועיות, נוכחות אנושית והקשבה אמיתית
                 לצרכים שעולים בכל שלב של החיים. חשוב לי ליצור מרחב שבו אפשר
-                להרגיש מובן, בטוח ומכובד.
+                להרגיש מובן, בטוח וחופשי לבטא את עצמו.
               </p>
-            </article>
-
-            <article class="panel panel--accent">
-              <h2>הגישה שלי</h2>
               <p>
-                אני מאמין שטיפול רגשי טוב מתחיל בקשר בטוח, מכבד וקשוב. בתוך מרחב
-                כזה אפשר להתבונן בקושי לעומק, לזהות כוחות פנימיים ולבנות שינוי
-                בקצב שמתאים למטופל, מתוך תחושה שיש עם מי לעבור את הדרך באופן
-                מקצועי, יציב ומכיל.
+                טיפול רגשי טוב מתחיל בקשר בטוח, מכבד וקשוב. בתוך מרחב כזה אפשר
+                להתבונן בקושי לעומק, לזהות כוחות פנימיים ולבנות שינוי בקצב
+                שמתאים למטופל, מתוך תחושה שיש עם מי לעבור את הדרך באופן מקצועי,
+                יציב ומכיל.
               </p>
               <p>
                 בעיניי, טיפול משמעותי אינו נמדד רק בהקלה מיידית, אלא גם ביכולת
@@ -1355,13 +1315,14 @@
                   <li>חרדה, ויסות רגשי וקשיי הסתגלות</li>
                   <li>גבולות, קשרים חברתיים והתמודדות בבית ובמסגרת</li>
                   <li>קשיי קשב וריכוז</li>
-                  <li>ליווי ילדים ובני נוער על הרצף האוטיסטי</li>
+                  <li>טיפול בילדים ובני נוער על הרצף האוטיסטי</li>
                 </ul>
               </article>
 
               <article class="card">
                 <h3>הדרכת הורים</h3>
                 <ul>
+                  <li>טיפול דיאדי הורה-ילד</li>
                   <li>הצבת גבולות ותקשורת בבית</li>
                   <li>הכוונה רגשית והתמודדות עם קונפליקטים</li>
                   <li>תמיכה במשפחה במצבי קושי ומשבר</li>
@@ -1371,27 +1332,14 @@
               <article class="card">
                 <h3>טיפול רגשי במבוגרים</h3>
                 <ul>
-                  <li>חרדה, דכדוך ותחושת תקיעות</li>
-                  <li>משברי חיים, אובדן ושינויים משמעותיים</li>
-                  <li>קשיים בזוגיות ובמערכות יחסים</li>
+                  <li>חרדה, דיכאון, מצוקה רגשית ותחושת תקיעות</li>
+                  <li>משברי חיים, אובדן, אבל ושכול</li>
+                  <li>קשיי הסתגלות, תפקוד ושינויים משמעותיים</li>
+                  <li>טיפול זוגי ומשפחתי</li>
+                  <li>קשיים בקשרים זוגיים, משפחתיים וחברתיים</li>
+                  <li>התמודדות עם טראומה, פגיעה מינית ומצבי משבר</li>
                 </ul>
               </article>
-            </div>
-
-            <div class="main__cta">
-              <a
-                class="btn btn--primary"
-                href="https://wa.me/972528592021?text=שלום%20אבישי,%20אשמח%20לפרטים%20נוספים..."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span class="btn__icon" aria-hidden="true">
-                  <svg aria-hidden="true" focusable="false">
-                    <use href="#icon-whatsapp"></use>
-                  </svg>
-                </span>
-                <span>פרטים נוספים</span>
-              </a>
             </div>
           </div>
         </section>
@@ -1402,7 +1350,7 @@
             <article class="panel">
               <h2>איך נראה הטיפול?</h2>
               <p>
-                הטיפול מתקיים במרחב בטוח, מכבד וקשוב, שבו אפשר לעצור ולהתבונן
+                הטיפול מתקיים במרחב בטוח, קשוב ולא שיפוטי, שבו אפשר לעצור ולהתבונן
                 במה שמתרחש בפנים ובקשרים עם אחרים. במהלך הטיפול ננסה להבין כיצד
                 חוויות עבר, דפוסי תקשורת וקשרים משמעותיים משפיעים על מחשבות,
                 רגשות ודרכי ההתמודדות בהווה.
@@ -1419,6 +1367,11 @@
                 אוטומטיות ותגובות רגשיות, ולהבין כיצד הם משפיעים על קשרים
                 קרובים, משפחה, זוגיות, עבודה והורות.
               </p>
+              <p>
+                לצד השיח וההתבוננות הרגשית, ניתן לשלב גם כלים מעשיים מעולמות
+                הטיפול הקוגניטיבי-התנהגותי, כמו עבודה עם מחשבות אוטומטיות,
+                נשימה, הרפיה וקשיבות, בהתאם לצורך ולקצב האישי.
+              </p>
             </article>
           </div>
         </section>
@@ -1429,9 +1382,9 @@
             <article class="panel">
               <h2>ניסיון מקצועי</h2>
               <p>
-                במהלך השנים צברתי ניסיון בליווי ילדים, הורים ומבוגרים במסגרות
+                במהלך השנים צברתי ניסיון בטיפול בילדים, הורים ומבוגרים במסגרות
                 טיפוליות, חינוכיות ושיקומיות. עבדתי עם מצבי טראומה ומשבר, קשיי
-                קשב וריכוז, ליווי ילדים ובני נוער על הרצף האוטיסטי, ואתגרים
+                קשב וריכוז, טיפול בילדים ובני נוער על הרצף האוטיסטי, ואתגרים
                 רגשיים ומשפחתיים שונים.
               </p>
               <p>
@@ -1473,14 +1426,8 @@
             <div class="section__head">
               <h2>איך מתחילים?</h2>
               <p>
-                טיפול הוא בראש ובראשונה קשר אנושי, ולכן אני נוהג להתחיל בכמה
-                מפגשי היכרות, בדרך כלל שניים, כדי לבדוק התאמה. במפגשים אלו אני
-                מציג את דרך העבודה שלי ושומע מעט על הרקע, נסיבות החיים והסיבה
-                לפנייה.
-              </p>
-              <p>
-                אין צורך להגיע עם ניסוח מסודר מראש; אפשר פשוט להתחיל ממה שמטריד
-                אותך.
+                טיפול הוא בראש ובראשונה קשר אנושי, ולכן תחילת הדרך מוקדשת
+                להיכרות, להבנת הפנייה ולחשיבה משותפת על ההמשך.
               </p>
               <p>משך כל מפגש הוא כ-45 דקות.</p>
               <p>הטיפול מתקיים בקליניקה בתל אביב ובאונליין.</p>
@@ -1501,7 +1448,7 @@
                 <span class="step__index">3</span>
                 <h3>מתאימים מסגרת</h3>
                 <p>
-                  נחליט יחד על טיפול רגשי, הדרכת הורים, טיפול דיאדי או ליווי
+                  נחליט יחד על טיפול רגשי, הדרכת הורים, טיפול דיאדי או טיפול
                   רגשי למבוגר.
                 </p>
               </article>
@@ -1532,7 +1479,7 @@
                       <use href="#icon-whatsapp"></use>
                     </svg>
                   </span>
-                  <span>שיחת היכרות</span>
+                  <span>ליצירת קשר</span>
                 </a>
               </p>
               <p>
